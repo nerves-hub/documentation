@@ -6,7 +6,7 @@ description: This document describes the endpoints used for managing users on Ne
 
 {% api-method method="post" host="https://api.nerves-hub.org" path="/users/register" %}
 {% api-method-summary %}
-Register for an account
+Register
 {% endapi-method-summary %}
 
 {% api-method-description %}
@@ -61,7 +61,7 @@ Email already in use
 
 {% api-method method="post" host="https://api.nerves-hub.org" path="/users/auth" %}
 {% api-method-summary %}
-Authenticate an existing account
+Authenticate
 {% endapi-method-summary %}
 
 {% api-method-description %}
@@ -112,7 +112,7 @@ Invalid email or password
 
 {% api-method method="post" host="https://api.nerves-hub.org" path="/users/sign" %}
 {% api-method-summary %}
-Sign a user certificate signing request
+Sign certificate
 {% endapi-method-summary %}
 
 {% api-method-description %}
@@ -170,7 +170,7 @@ Invalid email or password
 
 {% api-method method="get" host="https://api.nerves-hub.org" path="/users/me" %}
 {% api-method-summary %}
-Show user for certificate
+Show user
 {% endapi-method-summary %}
 
 {% api-method-description %}
