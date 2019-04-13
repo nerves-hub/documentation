@@ -8,6 +8,7 @@
 
 ## Nerves Hub User API
 
+* [Users](nerves-hub-user-api/users.md)
 * [API Doc Testing](nerves-hub-user-api/api-doc-testing.md)
 * [FAQ](nerves-hub-user-api/faq.md)
 
