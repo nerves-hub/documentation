@@ -4,10 +4,14 @@
 
 ## Nerves Hub
 
-* [Getting started](setup/getting-started.md)
+* [Setup](nerves-hub/setup.md)
 
 ## Nerves Hub User API
+
+* [API Doc Testing](nerves-hub-user-api/api-doc-testing.md)
+* [FAQ](nerves-hub-user-api/faq.md)
 
 ## Nerves Key
 
 * [Getting started](nerveskey/getting-started.md)
+
