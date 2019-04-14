@@ -13,7 +13,7 @@
   * [Firmware](nerves-hub/setup/firmware.md)
   * [Deployments](nerves-hub/setup/deployments.md)
 
-## Nerves Hub User API
+## User API
 
 * [Users](nerves-hub-user-api/users.md)
 * [Firmware Signing Keys](nerves-hub-user-api/firmware-signing-keys.md)
@@ -23,6 +23,7 @@
 
 * [Overview](device-api/overview.md)
 * [Phoenix Channel](device-api/phoenix-channel.md)
+* [HTTP Endpoint](device-api/http-endpoint.md)
 
 ## Nerves Key
 
