@@ -1,4 +1,40 @@
-# API Doc Testing
+# Phoenix Channel
+
+NervesHub exposes a Websockets interface for the Phoenix channel via `wss://nerves-hub:433/socket/websocket`. Devices should join the `device` channel when connecting to receive update and other device-specific notifications. NervesHub uses the device's SSL certificate to determine the device's organization and serial number. The join parameters include:
+
+
+
+{% api-method method="get" host="" path="" %}
+{% api-method-summary %}
+
+{% endapi-method-summary %}
+
+{% api-method-description %}
+
+{% endapi-method-description %}
+
+{% api-method-spec %}
+{% api-method-request %}
+{% api-method-path-parameters %}
+{% api-method-parameter name="" type="string" required=false %}
+
+{% endapi-method-parameter %}
+{% endapi-method-path-parameters %}
+{% endapi-method-request %}
+
+{% api-method-response %}
+{% api-method-response-example httpCode=200 %}
+{% api-method-response-example-description %}
+
+{% endapi-method-response-example-description %}
+
+```
+
+```
+{% endapi-method-response-example %}
+{% endapi-method-response %}
+{% endapi-method-spec %}
+{% endapi-method %}
 
 {% api-method method="get" host="https://api.cakes.com" path="/v1/cakes/:id" %}
 {% api-method-summary %}

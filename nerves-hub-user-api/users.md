@@ -1,5 +1,7 @@
 ---
-description: This document describes the endpoints used for managing users on NervesHub.
+description: >-
+  This document describes the endpoints used for managing users on NervesHub
+  through the User API.
 ---
 
 # Users
@@ -43,18 +45,6 @@ Account successfully created
 }
 ```
 {% endapi-method-response-example %}
-
-{% api-method-response-example httpCode=422 %}
-{% api-method-response-example-description %}
-Email already in use
-{% endapi-method-response-example-description %}
-
-```javascript
-{
-    "errors": "email already taken"
-}
-```
-{% endapi-method-response-example %}
 {% endapi-method-response %}
 {% endapi-method-spec %}
 {% endapi-method %}
@@ -91,18 +81,6 @@ Correct email and password
 {
     "username": "user1234",
     "email": "user@domain.com"
-}
-```
-{% endapi-method-response-example %}
-
-{% api-method-response-example httpCode=500 %}
-{% api-method-response-example-description %}
-Invalid email or password
-{% endapi-method-response-example-description %}
-
-```
-{
-    "errors": "authentication_failed"
 }
 ```
 {% endapi-method-response-example %}
@@ -152,18 +130,6 @@ The certificate was signed
 }
 ```
 {% endapi-method-response-example %}
-
-{% api-method-response-example httpCode=500 %}
-{% api-method-response-example-description %}
-Invalid email or password
-{% endapi-method-response-example-description %}
-
-```javascript
-{
-    "errors": "authentication_failed"
-}
-```
-{% endapi-method-response-example %}
 {% endapi-method-response %}
 {% endapi-method-spec %}
 {% endapi-method %}
@@ -176,7 +142,7 @@ Show user
 {% api-method-description %}
 Return information about the user for a provided user certificate.  
   
-Requires client side SSL user certificate.
+**Requires:** client side SSL user certificate
 {% endapi-method-description %}
 
 {% api-method-spec %}
