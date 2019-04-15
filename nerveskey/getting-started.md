@@ -1,4 +1,4 @@
-# Getting started
+# NervesKey for Raspberry Pi
 
 The NervesKey is a tiny circuit board with an ATECC608A cryptographic chip from Microchip Technology. The chip is a relatively inexpensive addition to embedded computing platforms that include an I2C bus. The NervesKey is primarily intended to offer a non-disruptive adaptation for the Raspberry Pi, but can also be used in other development applications.
 

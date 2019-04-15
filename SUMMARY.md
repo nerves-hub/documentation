@@ -27,5 +27,6 @@
 
 ## Nerves Key
 
-* [Getting started](nerveskey/getting-started.md)
+* [Introduction](nerveskey/introduction.md)
+* [NervesKey for Raspberry Pi](nerveskey/getting-started.md)
 
