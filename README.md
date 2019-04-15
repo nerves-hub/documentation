@@ -1,5 +1,9 @@
 # Introduction
 
+{% hint style="danger" %}
+This documentation is being heavily written, edited and reorganized. Please continue to use the documentation in the README.md files in the NervesHub GitHub repositories.
+{% endhint %}
+
 NervesHub is an open-source firmware update server that works well with Nerves-based devices. A managed version is available at [nerves-hub.org](https://nerves-hub.org) and it's possible to host your own.
 
 NervesHub provides many of the features that you'd expect in a firmware update server. Fundamentally, devices connect to the server either by polling at a pre-configured interval or by joining a long-lived Phoenix channel. If a firmware update is available, NervesHub will provide a URL to the device and the device can update immediately or when convenient.
