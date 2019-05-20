@@ -8,7 +8,7 @@ NervesHub is an open-source firmware update server that works well with Nerves-b
 
 NervesHub provides many of the features that you'd expect in a firmware update server. Fundamentally, devices connect to the server either by polling at a pre-configured interval or by joining a long-lived [Phoenix channel](https://hexdocs.pm/phoenix/channels.html). If a firmware update is available, NervesHub provides a URL to the device and the device can update immediately or when convenient.
 
-NervesHub leverages best practices and libraries from the Elixir community to provide a service that scales from hobbyist use to large scale industrial deployments. Since all components are open-source, there is no lock in. Extensive regression tests enable your development team to extend NervesHub with confidence if necessary. Of course, we hope that you will contribute improvements back.
+NervesHub leverages best practices and libraries from the Elixir community to provide a service that scales from hobbyist use to large scale industrial deployments. Since all components are open-source, there is no lock in. Extensive regression tests enable you to extend NervesHub with confidence if necessary. Of course, we hope that you will contribute improvements back.
 
 Security is a primary concern of NervesHub:
 
@@ -69,17 +69,6 @@ Users should protect firmware signing keys. It is possible to register multiple 
 
 
 
-
-NervesHub does impose some requirements on devices and firmware that may require changes to your Nerves projects:
-
-* Firmware images are cryptographically signed \(both NervesHub and devices
-
-  validate signatures\)
-
-* Devices are identified by a organization-wide unique serial number
-* Each device has its own SSL certificate for authentication with NervesHub
-
-These changes enable NervesHub to provide assurances that the firmware that you intend to install on a set of devices make it to those devices unaltered.
 
 
 
