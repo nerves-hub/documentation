@@ -48,7 +48,7 @@ When a device connects for the first time, the device must present both its publ
 
 The NervesHub CLI tools provide convenience functions for creating certificates. It's also possible to use openssl or the Elixir [x509 library](https://hex.pm/packages/x509) directly. 
 
-Care should be taken when handling the Device CA and device private keys. Compromised private keys can be used to access firmware updates and likely cause other mischief. Consider integrating a hardware storage chip into your device if it does not natively support secure storage. See [NervesKey](nerveskey/getting-started.md) for one solution.
+Care should be taken when handling the Device CA and device private keys. Compromised private keys can be used to access firmware updates and likely cause other mischief. Consider integrating a hardware storage chip into your device if it does not natively support secure storage. See [NervesKey](nerves-key/getting-started.md) for one solution.
 
 #### Firmware update signatures
 

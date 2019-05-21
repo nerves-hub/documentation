@@ -1,6 +1,8 @@
 # Table of contents
 
 * [Introduction](README.md)
+* [High level architecture](high-level-architecture.md)
+* [Public key infrastructure](public-key-infrastructure.md)
 
 ## Nerves Hub
 
@@ -15,9 +17,9 @@
 
 ## User API
 
-* [Users](nerves-hub-user-api/users.md)
-* [Firmware Signing Keys](nerves-hub-user-api/firmware-signing-keys.md)
-* [FAQ](nerves-hub-user-api/faq.md)
+* [Users](user-api/users.md)
+* [Firmware Signing Keys](user-api/firmware-signing-keys.md)
+* [FAQ](user-api/faq.md)
 
 ## Device API
 
@@ -27,6 +29,6 @@
 
 ## Nerves Key
 
-* [Introduction](nerveskey/introduction.md)
-* [NervesKey for Raspberry Pi](nerveskey/getting-started.md)
+* [Introduction](nerves-key/introduction.md)
+* [NervesKey for Raspberry Pi](nerves-key/getting-started.md)
 
