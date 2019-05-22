@@ -60,4 +60,3 @@ SSL options can be configured by passing them into the NervesHub supervisor. Thi
     end
   end
 ```
-

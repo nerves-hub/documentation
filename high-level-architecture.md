@@ -2,7 +2,7 @@
 
 The following diagram shows the primary NervesHub components.
 
-![](.gitbook/assets/nerveshub-architecture-1.png)
+![NervesHub architecture](.gitbook/assets/nerveshub-architecture-1.png)
 
 The NervesHub server provides web and API endpoints for most interactions. The actual firmware storage and delivery resides on an object storage service such as AWS S3.
 
@@ -13,4 +13,3 @@ User interaction with NervesHub is through the web interface and via a CLI provi
 Devices connect to NervesHub via a separate API endpoint that exposes only the functionality needed for firmware updates. For Nerves-based devices, the [nerves\_hub](https://github.com/nerves-hub/nerves_hub) library manages the interactions with the NervesHub server and invokes fwup to apply updates.
 
 The final component is the NervesHub Certificate Authority \(CA\). This component issues the client-side SSL certificates for the User API. Devices also use client-side SSL, but those certificates are issued and managed by you, the user of NervesHub.
-

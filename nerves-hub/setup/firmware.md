@@ -19,4 +19,3 @@ Firmware can also be signed while publishing:
 ```bash
 mix nerves_hub.firmware publish --key devkey
 ```
-

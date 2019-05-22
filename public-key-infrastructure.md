@@ -23,4 +23,3 @@ The public keys used to sign firmware update files must be uploaded to NervesHub
 NervesHub requires users to register firmware public keys with it. This is used to catch mistakes that would otherwise waste time and bandwidth with deploying firmware that could never install correctly.
 
 Users should protect firmware signing keys. It is possible to register multiple firmware public keys on NervesHub and on devices. This allows more convenient setups where development devices can accept both "production" and "debug" firmware. Devices in the field, though, could have only the "production" public keys and therefore reject accidental deploys of "debug" firmware. Of course, NervesHub supports more mechanisms to group devices so relying on firmware signing keys can be considered a last resort.
-

@@ -13,7 +13,7 @@ This endpoint allows you to poll for firmware updates.
 {% api-method-request %}
 {% api-method-headers %}
 {% api-method-parameter name="X-NervesHub-uuid" type="string" required=true %}
-The ruuning firmware's UUID
+The running firmware's UUID
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="X-NervesHub-vcs\_identifier" type="string" required=false %}
@@ -41,7 +41,7 @@ The author metadata in the running firmware
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="X-NervesHub-architecture" type="string" required=true %}
-The device's architecture. 
+The device's architecture.
 {% endapi-method-parameter %}
 {% endapi-method-headers %}
 {% endapi-method-request %}
@@ -62,6 +62,3 @@ A firmware update is available.
 {% endapi-method-response %}
 {% endapi-method-spec %}
 {% endapi-method %}
-
-
-

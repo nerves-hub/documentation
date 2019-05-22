@@ -4,11 +4,11 @@ Raspberry Pis are popular boards for prototyping and low volume deployments. Wit
 
 The NervesKey for Raspberry Pi is a tiny circuit board with an ATECC608A that can be mounted underneath the Raspberry Pi's GPIO header:
 
-![](../.gitbook/assets/nk_rpi_bottom_mount.jpg)
+![NervesKey installed on a Raspberry Pi](../.gitbook/assets/nk_rpi_bottom_mount.jpg)
 
 This location doesn't interfere with Raspberry Pi hats and still fits in many cases. If you would like a less permanent option, you can add a header to the NervesKey and attach it to the top of the Raspberry Pi or even add header pins for insertion in a breadboard. We recommend soldering it to the bottom, though, since NervesKeys are typically associated with one device. The keys can also be removed using solder wick.
 
-### Mounting the NervesKey
+## Mounting the NervesKey
 
 If you're using a Raspberry Pi Zero or Zero W that does not have header pins, solder those in first. If you're planning on mounting the NervesKey to the bottom of the board, try to use a little less solder on the right-most pins. Refer to the picture above for where the NervesKey is mounted. By using less solder, you'll be able to mount the NervesKey flatter on the bottom of the board.
 
@@ -20,7 +20,6 @@ The NervesKey connects to the I2C and power pins on the GPIO connector. If you m
 
 After you've soldered the NervesKey, go to the [Provisioning](provisioning.md) section for programming it.
 
-### More information and schematics
+## More information and schematics
 
 If you're already designing a custom board that attaches to the Raspberry Pi's GPIO header, it is likely going to be more convenient and less expensive to add an ATECC508A or ATECC608A to your board. See the [schematics](https://github.com/nerves-hub/nerves_key/blob/master/hw/assets/TSW19001_NERVESKEY_X1_SCH.PDF) for the connections.
-

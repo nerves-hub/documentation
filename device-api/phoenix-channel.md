@@ -1,8 +1,8 @@
 # Phoenix Channel
 
-NervesHub exposes a Websockets interface for the Phoenix channel via `wss://nerves-hub:433/socket/websocket`. Devices should join the `device` channel when connecting to receive update and other device-specific notifications. NervesHub uses the device's SSL certificate to determine the device's organization and serial number. The join parameters include:
+NervesHub exposes a WebSocket interface for the Phoenix channel via `wss://nerves-hub:433/socket/websocket`. Devices should join the `device` channel when connecting to receive update and other device-specific notifications. NervesHub uses the device's SSL certificate to determine the device's organization and serial number. The join parameters include:
 
-How do I make something that lokes like the parameter section in the API template?????
+How do I make something that looks like the parameter section in the API template?????
 
 | Parameter Name | Type |
 | :--- | :--- |

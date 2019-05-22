@@ -119,4 +119,3 @@ See the `NervesKey.clear_aux_certificates/1` function for erasing the auxiliary 
 The `NervesKey.put_settings/2` and `NervesKey.get_settings/1` APIs let you store and retrieve a map. Since the storage is limited and relatively slow, this is intended for settings that rarely change or may be tightly coupled with certificates already being stored in the NervesKey.
 
 Internally, `NervesKey` calls `:erlang.term_to_binary` to convert the map to raw bytes and then writes it to the ATECC508A/608A's persistent storage. Not that the keys in the map take up space as well.
-
