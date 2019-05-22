@@ -27,3 +27,4 @@ If you already have an account, make sure that you have authenticated by running
 ```bash
 mix nerves_hub.user auth
 ```
+

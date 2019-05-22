@@ -17,3 +17,4 @@ Storage for a board name and hardware revision is also available. Like the manuf
 Finally, each NervesKey provides 524 bytes of user storage for settings. This can be handy for storing important information settings that you don't want to lose if someone replaces the MicroSD card on your device. This could hold WiFi settings, for example. Another use is to store calibration data that's determined at manufacturing time. See [`NervesKey.put_settings/2`](https://hexdocs.pm/nerves_key/NervesKey.html#put_settings/2) and [`NervesKey.get_settings/1`](https://hexdocs.pm/nerves_key/NervesKey.html#get_settings/1) for more information.
 
 See the NervesKey [ATECC508a Configuration](https://github.com/nerves-hub/nerves_key#atecc508a-configuration) for the low level storage of all of the above.
+

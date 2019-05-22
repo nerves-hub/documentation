@@ -13,3 +13,4 @@ User interaction with NervesHub is through the web interface and via a CLI provi
 Devices connect to NervesHub via a separate API endpoint that exposes only the functionality needed for firmware updates. For Nerves-based devices, the [nerves\_hub](https://github.com/nerves-hub/nerves_hub) library manages the interactions with the NervesHub server and invokes fwup to apply updates.
 
 The final component is the NervesHub Certificate Authority \(CA\). This component issues the client-side SSL certificates for the User API. Devices also use client-side SSL, but those certificates are issued and managed by you, the user of NervesHub.
+

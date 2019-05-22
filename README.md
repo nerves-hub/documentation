@@ -17,3 +17,4 @@ Security is a primary concern of NervesHub:
 * Access control within organizations to firmware updates
 
 NervesHub provides the tools for safe remote updates. While it's not possible for the firmware update server alone to ensure that firmware updates are always safe, NervesHub does provide lightweight verification of firmware and detects misbehaving devices.
+

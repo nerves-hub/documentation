@@ -58,3 +58,4 @@ Start `etcher`, point it to the zip file, and follow the prompts:
 Eject the SD card and insert it into the device that you're using. Power up and connect the device with a USB cable. In the case of the `rpi0`, the micro USB does both.
 
 Once the device boots, you can now connect to it.
+

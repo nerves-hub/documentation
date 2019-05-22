@@ -16,6 +16,16 @@
   * [Firmware](nerves-hub/setup/firmware.md)
   * [Deployments](nerves-hub/setup/deployments.md)
 
+## Nerves Key
+
+* [Introduction](nerves-key/introduction.md)
+* [NervesKey for Raspberry Pi](nerves-key/getting-started.md)
+* [Private keys and X.509 certificates](nerves-key/private-key-storage.md)
+* [General NervesKey storage](nerves-key/general-nerveskey-storage.md)
+* [Quickstart](nerves-key/provisioning.md)
+* [Provisioning in Elixir](nerves-key/provisioning-in-elixir.md)
+* [Integration with NervesHub](nerves-key/integration-with-nerveshub.md)
+
 ## User API
 
 * [Users](user-api/users.md)
@@ -27,13 +37,4 @@
 * [Overview](device-api/overview.md)
 * [Phoenix Channel](device-api/phoenix-channel.md)
 * [HTTP Endpoint](device-api/http-endpoint.md)
-
-## Nerves Key
-
-* [Introduction](nerves-key/introduction.md)
-* [NervesKey for Raspberry Pi](nerves-key/getting-started.md)
-* [Private keys and X.509 certificates](nerves-key/private-key-storage.md)
-* [General NervesKey storage](nerves-key/general-nerveskey-storage.md)
-* [Quickstart](nerves-key/provisioning.md)
-* [Provisioning in Elixir](nerves-key/provisioning-in-elixir.md)
 

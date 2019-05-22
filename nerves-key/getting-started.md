@@ -23,3 +23,4 @@ After you've soldered the NervesKey, go to the [Provisioning](provisioning.md) s
 ## More information and schematics
 
 If you're already designing a custom board that attaches to the Raspberry Pi's GPIO header, it is likely going to be more convenient and less expensive to add an ATECC508A or ATECC608A to your board. See the [schematics](https://github.com/nerves-hub/nerves_key/blob/master/hw/assets/TSW19001_NERVESKEY_X1_SCH.PDF) for the connections.
+
