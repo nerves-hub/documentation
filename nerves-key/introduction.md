@@ -8,8 +8,7 @@ The following are options for adding a NervesKey to your device:
 2. Obtain a [NervesKey](https://www.tindie.com/products/troodonsw/nerveskey/) and solder it to the GPIO connector on a Raspberry Pi
 3. Contact us for information about USB NervesKey
 
-The NervesKey configuration of the ATECC508A/ATECC608A is documented in the [nerves\_key project's README.md](https://github.com/nerves-hub/nerves_key#atecc508a-configuration). The cryptographic modules are quite capable devices. If the NervesKey configuration does not meet your needs,
-refer to the module datasheets and use the [nerves\_key configuration](https://github.com/nerves-hub/nerves_key#atecc508a-configuration) as a helpful example.
+The NervesKey configuration of the ATECC508A/ATECC608A is documented in the [nerves\_key project's README.md](https://github.com/nerves-hub/nerves_key#atecc508a-configuration). The cryptographic modules are quite capable devices. If the NervesKey configuration does not meet your needs, refer to the module datasheets and use the [nerves\_key configuration](https://github.com/nerves-hub/nerves_key#atecc508a-configuration) as a helpful example.
 
 {% hint style="danger" %}
 Except for a few cases, NervesKeys come unprogrammed. Some fields in the NervesKey can only be programmed once.
