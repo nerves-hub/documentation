@@ -24,7 +24,8 @@
 * [General NervesKey storage](nerves-key/general-nerveskey-storage.md)
 * [Quickstart](nerves-key/provisioning.md)
 * [Provisioning in Elixir](nerves-key/provisioning-in-elixir.md)
-* [Integration with NervesHub](nerves-key/integration-with-nerveshub.md)
+* [NervesHub integration](nerves-key/integration-with-nerveshub.md)
+* [MQTT integration](nerves-key/mqtt-integration.md)
 
 ## User API
 

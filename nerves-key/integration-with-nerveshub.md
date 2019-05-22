@@ -4,7 +4,7 @@ description: >-
   NervesHub.
 ---
 
-# Integration with NervesHub
+# NervesHub integration
 
 ## Device registration
 
