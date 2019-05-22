@@ -26,7 +26,25 @@ This is a globally unique firmware identifier created from the contents of the f
 
 Products organize related devices, firmware, and deployments. Organizations and users can have one or more products. Devices, firmware, and deployments only belong to one product at a time.
 
+## NervesKey
 
+A NervesKey is a hardware module that protects a device's private key and is used to authenticate a device with NervesHub.
+
+## Device Certificate
+
+A device certificate is an X.509 certificate that identifies a device. Each device certificate contains a public key, the device's serial number, validatity and other information. NervesHub uses device certificates to authenticate connections from devices.
+
+## Device CA Certificate
+
+A device CA certificate is an X.509 certificate used by device manufacturers to cryptographically sign device certficates. NervesHub uses device CA certificates to validate  device certificates.
+
+## Firmware signing keys
+
+Firmware signing keys refer to the raw or base64-encoded public and private keys used to sign and authenticate firmware files. NervesHub and devices hold public keys and verify firmware files before processing them. Firmware signatures provide an end-to-end assurance that the firmware installed on a device has not been modified by NervesHub or anyone else.
+
+##  
+
+##  
 
 
 
