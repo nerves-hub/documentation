@@ -2,7 +2,7 @@
 
 NervesHub uses [asymmetric cryptography](https://en.wikipedia.org/wiki/Public-key_cryptography) for authenticating both sides of the connections to NervesHub and for end-to-end validation of firmware images. As with any use of asymmetric cryptography, a public key infrastructure \(PKI\) is required for establishing trust. The PKI for NervesHub is mostly managed by organizations using the service. Choices in NervesHub are intentionally compatible with other IoT services such as AWS IoT so that devices need only be provisioned with one private key rather than having a private key per service. There is no requirement that preventing devices from being issued many private keys, though.
 
-##  Client-side SSL for devices
+## Client-side SSL for devices
 
 Before use, each device must be provisioned with a signed X.509 certificate and its associated private key. When devices connect to NervesHub they'll validate NervesHub's certificate. Likewise, NervesHub validates these client certificates.
 
@@ -23,3 +23,4 @@ The public keys used to sign firmware update files must be uploaded to NervesHub
 NervesHub requires users to register firmware public keys with it. This is used to catch mistakes that would otherwise waste time and bandwidth with deploying firmware that could never install correctly.
 
 Users should protect firmware signing keys. It is possible to register multiple firmware public keys on NervesHub and on devices. This allows more convenient setups where development devices can accept both "production" and "debug" firmware. Devices in the field, though, could have only the "production" public keys and therefore reject accidental deploys of "debug" firmware. Of course, NervesHub supports more mechanisms to group devices so relying on firmware signing keys can be considered a last resort.
+

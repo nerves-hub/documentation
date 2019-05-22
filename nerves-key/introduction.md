@@ -1,10 +1,16 @@
 # Introduction
 
-**NOTE: I'm catching up with work and not able to get to the docs right now. The NervesKey GitHub repositories have a lot of information, but it's too low level and more than you need. Ping me on the Elixir Slack \(\#nerves channel or DM\) and I'll help when I can!**
+A NervesKey is a cryptographic hardware module that is configured to work with NervesHub. Its primary responsibility is to secure the private key used for authentication. It can also store useful information such as device serial numbers, board name, and important settings.
 
-A NervesKey is a cryptographic hardware module that has been configured to work with NervesHub. Its primary responsibility is to secure the private keys used to authenticate devices with NervesHub. The following are some options for adding a NervesKey to your device:
+The following are options for adding a NervesKey to your device:
 
-1. If you're making a custom board, add a Microchip ATECC508A or ATECC608A to an I2C bus 
-2. For Raspberry Pi's, purchase a NervesKey and solder it to the GPIO connector on the Pi
-3. Contact us for information about a USB version of the NervesKey
+1. If you're making a custom board, add a Microchip [ATECC508A](https://octopart.com/search?q=atecc508a) or [ATECC608A](https://octopart.com/search?q=atecc608a) to an available I2C bus 
+2. Obtain a [NervesKey](https://www.tindie.com/products/troodonsw/nerveskey/) and solder it to the GPIO connector on a Raspberry Pi
+3. Contact us for information about USB NervesKey
+
+The NervesKey configuration of the ATECC508A/ATECC608A is documented in the [nerves\_key project's README.md](https://github.com/nerves-hub/nerves_key#atecc508a-configuration). The cryptographic modules are quite capable devices so please see that and the module datasheets if the NervesKey configuration does not meet your needs.
+
+{% hint style="danger" %}
+Except for a few cases, NervesKeys come unprogrammed. Some fields in the NervesKey can only be programmed once. 
+{% endhint %}
 

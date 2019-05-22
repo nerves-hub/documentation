@@ -3,6 +3,7 @@
 * [Introduction](README.md)
 * [High level architecture](high-level-architecture.md)
 * [Public key infrastructure](public-key-infrastructure.md)
+* [Terminology](terminology.md)
 
 ## Nerves Hub
 
@@ -31,4 +32,8 @@
 
 * [Introduction](nerves-key/introduction.md)
 * [NervesKey for Raspberry Pi](nerves-key/getting-started.md)
+* [Private keys and X.509 certificates](nerves-key/private-key-storage.md)
+* [General NervesKey storage](nerves-key/general-nerveskey-storage.md)
+* [Quickstart](nerves-key/provisioning.md)
+* [Provisioning in Elixir](nerves-key/provisioning-in-elixir.md)
 
