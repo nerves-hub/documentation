@@ -15,6 +15,8 @@
   * [Devices](nerves-hub/setup/devices.md)
   * [Firmware](nerves-hub/setup/firmware.md)
   * [Deployments](nerves-hub/setup/deployments.md)
+* [Managing organizations and products](nerves-hub/managing-organizations-and-products.md)
+* [Device management](nerves-hub/device-management.md)
 
 ## Nerves Key
 
