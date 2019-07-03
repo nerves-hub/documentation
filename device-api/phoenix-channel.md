@@ -1,106 +1,47 @@
 # Phoenix Channel
 
-NervesHub exposes a WebSocket interface for the Phoenix channel via `wss://nerves-hub:433/socket/websocket`. Devices should join the `device` channel when connecting to receive update and other device-specific notifications. NervesHub uses the device's SSL certificate to determine the device's organization and serial number. The join parameters include:
+NervesHub exposes a WebSocket interface which utilizes [Phoenix channels](https://hexdocs.pm/phoenix/channels.html) for long lived connections. NervesHub uses SSL peer verification so the device's certificate and applicable CA certificates must be included in the connection request. The device's SSL certificate is also used to determine organization and serial number.
 
-How do I make something that looks like the parameter section in the API template?????
+The connection URI is [`wss://device.nerves-hub.org/socket/websocket`](wss://device.nerves-hub.org/socket/websocket). Once connected, you can then join any of the supported channel topics to start sending and receiving messages with NervesHub.
 
-| Parameter Name | Type |
-| :--- | :--- |
-|  |  |
+### Message Structure
 
-{% api-method method="get" host="" path="" %}
-{% api-method-summary %}
-
-{% endapi-method-summary %}
-
-{% api-method-description %}
-
-{% endapi-method-description %}
-
-{% api-method-spec %}
-{% api-method-request %}
-{% api-method-path-parameters %}
-{% api-method-parameter name="" type="string" required=false %}
-
-{% endapi-method-parameter %}
-{% endapi-method-path-parameters %}
-{% endapi-method-request %}
-
-{% api-method-response %}
-{% api-method-response-example httpCode=200 %}
-{% api-method-response-example-description %}
-
-{% endapi-method-response-example-description %}
-
-```text
-
-```
-{% endapi-method-response-example %}
-{% endapi-method-response %}
-{% endapi-method-spec %}
-{% endapi-method %}
-
-{% api-method method="get" host="https://api.cakes.com" path="/v1/cakes/:id" %}
-{% api-method-summary %}
-Get Cakes
-{% endapi-method-summary %}
-
-{% api-method-description %}
-This endpoint allows you to get free cakes.
-{% endapi-method-description %}
-
-{% api-method-spec %}
-{% api-method-request %}
-{% api-method-path-parameters %}
-{% api-method-parameter name="id" type="string" %}
-ID of the cake to get, for free of course.
-{% endapi-method-parameter %}
-{% endapi-method-path-parameters %}
-
-{% api-method-headers %}
-{% api-method-parameter name="Authentication" type="string" required=true %}
-Authentication token to track down who is emptying our stocks.
-{% endapi-method-parameter %}
-{% endapi-method-headers %}
-
-{% api-method-query-parameters %}
-{% api-method-parameter name="recipe" type="string" %}
-The API will do its best to find a cake matching the provided recipe.
-{% endapi-method-parameter %}
-
-{% api-method-parameter name="gluten" type="boolean" %}
-Whether the cake should be gluten-free or not.
-{% endapi-method-parameter %}
-{% endapi-method-query-parameters %}
-{% endapi-method-request %}
-
-{% api-method-response %}
-{% api-method-response-example httpCode=200 %}
-{% api-method-response-example-description %}
-Cake successfully retrieved.
-{% endapi-method-response-example-description %}
+NervesHub utilizes the Phoenix message structure for all WebSocket communications. In its raw form, the message is a simple list expected to be structured as `[join_ref, ref, topic, event, message]` . \(See the [`Phoenix.Socket.Message` documetation ](https://hexdocs.pm/phoenix/Phoenix.Socket.Message.html)for more info on what each part of the message means\)
 
 ```javascript
-{
-    "name": "Cake's name",
-    "recipe": "Cake's recipe name",
-    "cake": "Binary cake"
-}
+# Example messages
+["join_123", "ref-453", "some_topic", "update", "some_message"]
+[null, "another-ref", "diff_topic", "response", {"key": "val"}]
+[null, null, "topic3", "wat", [1, 2, 3, 4]]
 ```
-{% endapi-method-response-example %}
 
-{% api-method-response-example httpCode=404 %}
-{% api-method-response-example-description %}
-Could not find a cake matching this query.
-{% endapi-method-response-example-description %}
+### Joining a Channel
+
+To communicate with NervesHub, you must join a channel on a supported topic once the websocket has been connected. This requires sending a message with the `phx_join` event to the desired topic:
 
 ```javascript
-{
-    "message": "Ain't no cake like that."
-}
+['arbitrary_join_ref', 'ref1', 'devices', 'phx_join', {}]
 ```
-{% endapi-method-response-example %}
-{% endapi-method-response %}
-{% endapi-method-spec %}
-{% endapi-method %}
+
+### Supported Channels
+
+NervesHub currently supports the following channel topics:
+
+* `device` - The main topic a device should join for receiving updates and other device specific events.
+* `console` - topic for the device to send IO requests to and from NervesHub for supporting remote console interaction. For Nerves, this is the topic used from remote IEx sessions.
+
+#### device
+
+Client -&gt; Server events
+
+* `phx_join`
+* `rebooting`
+* `fwup_progress`
+
+Server -&gt; Client events
+
+* `update`
+* `reboot`
+* `phx_error`
+* `phx_close`
 
