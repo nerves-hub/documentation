@@ -22,10 +22,11 @@
 
 * [Introduction](nerves-key/introduction.md)
 * [NervesKey for Raspberry Pi](nerves-key/getting-started.md)
-* [Private keys and X.509 certificates](nerves-key/private-key-storage.md)
+* [Private keys and certificates](nerves-key/private-key-storage.md)
 * [General NervesKey storage](nerves-key/general-nerveskey-storage.md)
 * [Quickstart](nerves-key/provisioning.md)
 * [Provisioning in Elixir](nerves-key/provisioning-in-elixir.md)
+* [Nerves integration](nerves-key/nerves-integration.md)
 * [NervesHub integration](nerves-key/integration-with-nerveshub.md)
 * [MQTT integration](nerves-key/mqtt-integration.md)
 

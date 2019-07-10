@@ -1,4 +1,4 @@
-# Private keys and X.509 certificates
+# Private keys and certificates
 
 Each NervesKey holds one ECC P256 private key. The provisioning process creates the private key and it never leaves the module. The ATECC508A and ATECC608A modules used on the NervesKeys have countermeasures to make extracting the private keys impractical. The associated public key can always be retrieved from the NervesKey.
 
