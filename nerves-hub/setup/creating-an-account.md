@@ -2,7 +2,7 @@
 
 The [nerves-hub.org](https://nerves-hub.org) NervesHub server is currently in limited beta so it does not allow new users to sign up. However, you found these docs and if you can use `mix` and endure some API changes, you can join us.
 
-In addition to the web site, NervesHub provides a command line interface \(CLI\). Some features are only available via the CLI. To enable the CLI in your project, add[nerves\_hub\_cli](https://hex.pm/packages/nerves_hub_cli) to your dependency list:
+In addition to the web site, NervesHub provides a command line interface \(CLI\). Some features are only available via the CLI. To enable the CLI in your project, add [nerves\_hub\_cli](https://hex.pm/packages/nerves_hub_cli) to your dependency list:
 
 ```elixir
   defp deps do
