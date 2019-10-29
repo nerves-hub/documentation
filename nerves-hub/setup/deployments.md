@@ -24,13 +24,13 @@ mix nerves_hub.deployment create
 NervesHub organization: nerveshub
 Deployment name: qa_deployment
 firmware uuid: 1cbecdbb-aa7d-5aee-4ba2-864d518417df
-version condition:
+version condition: < 0.3.0
 tags: qa
 Local user password:
 Deployment test created
 ```
 
-Here we create a new deployment called `qa_deployment`. In the conditions of this deployment we left the `version condition` unspecified and the `tags` set to only `qa`. This means that in order for a device to qualify for an update, it needs to have at least the tags `[qa]` and the device can be coming from any version.
+Here we create a new deployment called `qa_deployment`. In the conditions of this deployment, we specify "< 0.3.0" and the `tags` set to only `qa`. This means that in order for a device to qualify for an update, it needs to have at least the tags `[qa]` and the device must not already have been updated to this version.
 
 At this point we can try to update the connected device.
 
