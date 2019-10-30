@@ -22,7 +22,7 @@ Device 123456789ABCDE created
 ```
 
 {% hint style="info" %}
-When registering devices in bulk, we've found that there's usually a convenient hook in the manufacturing process to call `mix nerves_hub.device create` with commandline parameters. A future enhancement to NervesHub will allows you to have NervesHub automatically create devices that present properly signed device certificates and firmware metadata.
+When registering devices in bulk, we've found that there's usually a convenient hook in the manufacturing process to call `mix nerves_hub.device create` with commandline parameters. A future enhancement to NervesHub will allow you to have NervesHub automatically create devices that present properly signed device certificates and firmware metadata.
 {% endhint %}
 
 ### Integration with your Nerves project
