@@ -1,6 +1,6 @@
 # Nerves integration
 
-Nerves can use the serial number programmed into the NervesKey for the hostname. This can come in handy for finding devices on the network, since the hostname can be reported via DHCP or broadcast using mDNS. 
+Nerves can use the serial number programmed into the NervesKey for the hostname. This can come in handy for finding devices on the network since the hostname can be reported via DHCP or broadcast using mDNS. 
 
 {% hint style="info" %}
 The DHCP client for Nerves reports hostnames to the DHCP server. Some DHCP servers like dnsmasq-based ones register those names with a colocated DNS server so that requests of that name return the IP address of the Nerves-based device. Many DHCP servers do not do this, so mDNS is the only option for easily finding the device.

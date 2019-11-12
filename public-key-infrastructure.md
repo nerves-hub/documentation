@@ -1,6 +1,6 @@
 # Public key infrastructure
 
-NervesHub uses [asymmetric cryptography](https://en.wikipedia.org/wiki/Public-key_cryptography) for authenticating both sides of the connections to NervesHub and for end-to-end validation of firmware images. As with any use of asymmetric cryptography, a public key infrastructure \(PKI\) is required for establishing trust. The PKI for NervesHub is mostly managed by organizations using the service. Choices in NervesHub are intentionally compatible with other IoT services such as AWS IoT so that devices need only be provisioned with one private key rather than having a private key per service. There is no requirement that preventing devices from being issued many private keys, though.
+NervesHub uses [asymmetric cryptography](https://en.wikipedia.org/wiki/Public-key_cryptography) for authenticating both sides of the connections to NervesHub and for end-to-end validation of firmware images. As with any use of asymmetric cryptography, a public key infrastructure \(PKI\) is required for establishing trust. The PKI for NervesHub is mostly managed by organizations using the service. Choices in NervesHub are intentionally compatible with other IoT services such as AWS IoT so that devices need only be provisioned with one private key rather than having a private key per service. There is no requirement that prevents devices from being issued many private keys.
 
 ## Client-side SSL for devices
 
