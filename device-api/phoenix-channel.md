@@ -6,11 +6,11 @@ The connection URI is [`wss://device.nerves-hub.org/socket/websocket`](wss://dev
 
 ### Message Structure
 
-NervesHub utilizes the Phoenix message structure for all WebSocket communications. In its raw form, the message is a simple list expected to be structured as `[join_ref, ref, topic, event, message]` . \(See the [`Phoenix.Socket.Message` documetation ](https://hexdocs.pm/phoenix/Phoenix.Socket.Message.html)for more info on what each part of the message means\)
+NervesHub utilizes the Phoenix message structure for all WebSocket communications. In its raw form, the message is a simple list expected to be structured as `[join_ref, ref, topic, event, payload]` . \(See the [`Phoenix.Socket.Message` documetation ](https://hexdocs.pm/phoenix/Phoenix.Socket.Message.html)for more info on what each part of the message means\)
 
 ```javascript
 # Example messages
-["join_123", "ref-453", "some_topic", "update", "some_message"]
+["join_123", "ref-453", "some_topic", "update", "some_payload"]
 [null, "another-ref", "diff_topic", "response", {"key": "val"}]
 [null, null, "topic3", "wat", [1, 2, 3, 4]]
 ```
@@ -23,25 +23,109 @@ To communicate with NervesHub, you must join a channel on a supported topic once
 ['arbitrary_join_ref', 'ref1', 'devices', 'phx_join', {}]
 ```
 
-### Supported Channels
+### Supported Topics
 
 NervesHub currently supports the following channel topics:
 
 * `device` - The main topic a device should join for receiving updates and other device specific events.
 * `console` - topic for the device to send IO requests to and from NervesHub for supporting remote console interaction. For Nerves, this is the topic used from remote IEx sessions.
 
-#### device
+### Server Events
 
-Client -&gt; Server events
+The supported events in messages coming from the server \(NervesHub\) to the client:
 
-* `phx_join`
-* `rebooting`
-* `fwup_progress`
-
-Server -&gt; Client events
+#### **device**
 
 * `update`
+  * Specifies that an update is available for the device
+  * Payload fields:
+    * deployment\_id - ID of the deployment triggering the update
+    * firmware\_url - URL where the firmware file can be downloaded. **Note**: this has a default TTL of 10 minutes. Using the URL after that time will fail and a new update request will need to be sent for a new URL
+
+```javascript
+[
+  null,
+  "some-ref-1",
+  "devices",
+  "update",
+  {"deployment_id": 12, "firmware_url": "https://some-url.com"}
+]
+```
+
 * `reboot`
-* `phx_error`
+  * Request that device reboot. Typlically used for troubleshooting purposes
+  * Payload is not used and can be ignored
+
+```javascript
+[null, "some-ref-1", "devices", "reboot", {}]
+```
+
+* `phx_err`
+  * Error case, such as a channel process crashing, or when attempting to join an already joined channel
+  * Payload fields:
+    * `reason` - text of failure reason
+
+```javascript
+[null, "some-ref-1", "devices", "phx_err", {"reason": "some reason"}]
+```
+
 * `phx_close`
+  * Channel was gracefully closed
+  * Payload fields:
+    * tbd
+
+```javascript
+[null, "some-ref-1", "devices", "phx_close", {}]
+```
+
+### Client Events
+
+The supported event messages coming from the client to server \(NervesHub\)
+
+#### device
+
+* `rebooting`
+  * Tells the server that the device is rebooting
+  * Payload is ignored server-side
+
+```javascript
+[null, "some-ref-1", "devices", "rebooting", {}]
+```
+
+* `fwup_progress`
+  * Progress update during a firmware update
+  * Payload fields:
+    * `value` - percentage of update progress
+
+```javascript
+[
+  null,
+  "some-ref-1",
+  "devices",
+  "fwup_progress",
+  {"value": 42}
+]
+```
+
+* `status_update`
+  * Current status of the device as it relates to a firmware update
+  * Payload fields:
+    * `status` - One of the supported statuses for a device
+      * `idle` - waiting for an update
+      * `fwup_error` - error occurred in the fwup process
+      * `update_failed`
+      * `update_rescheduled`
+      * `unknown` - generic status for unhandled states
+
+```javascript
+[
+  null,
+  "some-ref-1",
+  "devices",
+  "status_update",
+  {"state": "update_rescheduled"}
+]
+```
+
+
 
