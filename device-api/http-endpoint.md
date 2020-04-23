@@ -55,7 +55,19 @@ A firmware update is available.
 ```javascript
 {
     "update_available": true,
-    "firmware_url": "Some URL"
+    "deployment_id": 12,
+    "firmware_url": "Some URL",
+    "firmware_meta": {
+      "uuid": "12345-6789-0129435",
+      "architecture": "arm",
+      "platform": "rpi0",
+      "product": "MyProduct",
+      "version": "1.1.10",
+      "author": "Ron Swanson",
+      "description": "baconator 3000",
+      "vcs_identifier": "some_version_control_sha",
+      "misc": "random data"
+    }
 }
 ```
 {% endapi-method-response-example %}

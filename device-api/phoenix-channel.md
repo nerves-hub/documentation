@@ -2,7 +2,7 @@
 
 NervesHub exposes a WebSocket interface which utilizes [Phoenix channels](https://hexdocs.pm/phoenix/channels.html) for long lived connections. NervesHub uses SSL peer verification so the device's certificate and applicable CA certificates must be included in the connection request. The device's SSL certificate is also used to determine organization and serial number.
 
-The connection URI is [`wss://device.nerves-hub.org/socket/websocket`](wss://device.nerves-hub.org/socket/websocket). Once connected, you can then join any of the supported channel topics to start sending and receiving messages with NervesHub.
+The connection URI is `wss://device.nerves-hub.org/socket/websocket`. Once connected, you can then join any of the supported channel topics to start sending and receiving messages with NervesHub.
 
 ### Message Structure
 
@@ -39,8 +39,19 @@ The supported events in messages coming from the server \(NervesHub\) to the cli
 * `update`
   * Specifies that an update is available for the device
   * Payload fields:
-    * deployment\_id - ID of the deployment triggering the update
-    * firmware\_url - URL where the firmware file can be downloaded. **Note**: this has a default TTL of 10 minutes. Using the URL after that time will fail and a new update request will need to be sent for a new URL
+    * `update_available` - Boolean stating update availability
+    * `deployment_id` - ID of the deployment triggering the update
+    * `firmware_url` - URL where the firmware file can be downloaded. **Note**: this has a default TTL of 10 minutes. Using the URL after that time will fail and a new update request will need to be sent for a new URL
+    * `firmware_meta` - Contains a map of the various metadata elements for the firmware
+      * `uuid`
+      * `architecture` 
+      * `platform` 
+      * `product` 
+      * `version` 
+      * `author` 
+      * `description` 
+      * `vcs_identifier` 
+      * `misc`
 
 ```javascript
 [
@@ -48,8 +59,24 @@ The supported events in messages coming from the server \(NervesHub\) to the cli
   "some-ref-1",
   "devices",
   "update",
-  {"deployment_id": 12, "firmware_url": "https://some-url.com"}
+  {
+    "update_available": true,
+    "deployment_id": 12,
+    "firmware_url": "https://some-url.com",
+    "firmware_meta": {
+      "uuid": "12345-6789-0129435",
+      "architecture": "arm",
+      "platform": "rpi0",
+      "product": "MyProduct",
+      "version": "1.1.10",
+      "author": "Ron Swanson",
+      "description": "baconator 3000",
+      "vcs_identifier": "some_version_control_sha",
+      "misc": "random data"
+    }
+  }
 ]
+
 ```
 
 * `reboot`
