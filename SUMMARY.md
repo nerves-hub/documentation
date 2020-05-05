@@ -27,7 +27,7 @@
 * [Quickstart](nerves-key/provisioning.md)
 * [Provisioning in Elixir](nerves-key/provisioning-in-elixir.md)
 * [Nerves integration](nerves-key/nerves-integration.md)
-* [NervesHub integration](nerves-key/integration-with-nerveshub.md)
+* [NervesHubLink integration](nerves-key/integration-with-nerveshublink.md)
 * [MQTT integration](nerves-key/mqtt-integration.md)
 
 ## User API
