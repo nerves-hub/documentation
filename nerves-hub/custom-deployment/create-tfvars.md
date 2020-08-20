@@ -1,12 +1,12 @@
 # Create a tfvars file
 
-Before you can deploy the architecture with Terraform you will need to set the variables that Terraform will use to generate the AWS services. First, You will need to clone and change directory to the the NervesHub Terraform repo. From there you can copy the example tfvars file:
+Before you can deploy the architecture with Terraform you will need to set the variables that Terraform will use to generate the AWS services. First, You will need to clone and change directory to the the [NervesHub Terraform repo](https://github.com/nerves-hub/terraform). From there you can copy the example tfvars file:
 
 ```bash
  cp terraform.tfvars.example terraform.tfvars
 ```
 
-If you haven't done so yet, you will need to configure your AWS credentials so that the AWS CLI tool can access AWS. Please the note the associated profile name. Finally, fill out the variables in the newly created `terraform.tfvars` with the data that will best support your instance of NervesHub. Below is a brief description of required or important variables and suggested values:
+If you haven't done so yet, you will need to configure your AWS credentials so that the AWS CLI tool can access AWS. Please note the associated profile name. Finally, fill out the variables in the newly created `terraform.tfvars` with the data that will best support your instance of NervesHub. Below is a brief description of required or important variables and suggested values:
 
 - `aws_region` = the region to which you want the app deployed e.g. `us-east-1`
 - `aws_profile` = the profile from your AWS credentials file that will grant Terraform access to AWS
