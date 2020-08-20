@@ -30,3 +30,5 @@ The app should now be totally accessible. The seeded login credentials will be:
 username: nerveshub
 password: nerveshub
 ```
+
+For security, it would be a good idea to login and update the default password right away.
