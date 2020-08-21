@@ -18,7 +18,7 @@ In an attempt to mount the NervesKey as flat as possible, we used solder wick to
 
 The NervesKey connects to the I2C and power pins on the GPIO connector. If you match your work to the picture, you'll be fine.
 
-After you've soldered the NervesKey, go to the [Provisioning](provisioning.md) section for programming it.
+After you've soldered the NervesKey, go to the [Provisioning](quickstart.md) section for programming it.
 
 ## More information and schematics
 
