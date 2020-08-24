@@ -72,7 +72,7 @@ config :nerves_hub_link, configurator: MyApp.Configurator
 
 ## Client Setup
 
-By default NervesHubLink applies updates as soon as it knows about them from the NervesHubLink server and doesn't give warning before rebooting. Optionally, you can override this behavior if desired by implementing the `NervesHubLink.Client` behaviour. 
+By default NervesHubLink applies updates as soon as it knows about them from the NervesHubLink server and doesn't give warning before rebooting. Optionally, you can override this behavior if desired by implementing the [`NervesHubLink.Client`](https://hexdocs.pm/nerves_hub_link/NervesHubLink.Client.html) behaviour. 
 
 This let's devices hook into the decision making process and monitor the update's progress.
 
@@ -99,6 +99,6 @@ end
 To have NervesHubLink invoke it, add the following to your `config.exs`:
 
 ```elixir
-config :nerves_hub, client: MyApp.NervesHubLinkClient
+config :nerves_hub_link, client: MyApp.NervesHubLinkClient
 ```
 

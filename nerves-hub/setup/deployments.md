@@ -48,20 +48,20 @@ mix nerves_hub.firmware publish --key devkey --deploy qa_deployment
 
 ## Conditionally applying updates
 
-It's not always appropriate to apply a firmware update immediately. Custom logic can be added to the device by implementing the `NervesHub.Client` behaviour and telling the NervesHub OTP application about it.
+It's not always appropriate to apply a firmware update immediately. Custom logic can be added to the device by implementing the [`NervesHubLink.Client`](https://hexdocs.pm/nerves_hub_link/NervesHubLink.Client.html) behaviour and telling the NervesHubLink OTP application about it.
 
 Here's an example implementation:
 
 ```elixir
 defmodule MyApp.NervesHubClient do
-   @behaviour NervesHub.Client
+   @behaviour NervesHubLink.Client
 
    # May return:
    #  * `:apply` - apply the action immediately
    #  * `:ignore` - don't apply the action, don't ask again.
    #  * `{:reschedule, timeout_in_milliseconds}` - call this function again later.
 
-   @impl NervesHub.Client
+   @impl NervesHubLink.Client
    def update_available(data) do
     if SomeInternalAPI.is_now_a_good_time_to_update?(data) do
       :apply
@@ -72,9 +72,9 @@ defmodule MyApp.NervesHubClient do
 end
 ```
 
-To have NervesHub invoke it, update your `config.exs` as follows:
+To have NervesHubLink invoke it, update your `config.exs` as follows:
 
 ```elixir
-config :nerves_hub, client: MyApp.NervesHubClient
+config :nerves_hub_link, client: MyApp.NervesHubClient
 ```
 

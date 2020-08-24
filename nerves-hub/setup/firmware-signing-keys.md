@@ -17,24 +17,24 @@ The next step is to make sure that the public key is embedded into the firmware 
 All firmware signing public keys need to be added to your `config.exs`. Keys that are stored locally \(like the one we just created\) can be referred to by their atom name:
 
 ```elixir
-config :nerves_hub,
+config :nerves_hub_link,
   fwup_public_keys: [:devkey]
 ```
 
 If you have keys that cannot be stored locally, you will have to copy/paste their public key:
 
 ```elixir
-config :nerves_hub,
+config :nerves_hub_link,
   fwup_public_keys: [
     # devkey
     "bM/O9+ykZhCWx8uZVgx0sU3f0JJX7mqnAVU9VGeuHr4="
   ]
 ```
 
-The `nerves_hub` dependency converts key names to public keys at compile time. If you haven't compiled your project yet, run `mix firmware` now. If you have compiled it, `mix` won't know to recompile `nerves_hub` due to the configuration change. Force it to recompile by running:
+The `nerves_hub_link` dependency converts key names to public keys at compile time. If you haven't compiled your project yet, run `mix firmware` now. If you have compiled it, `mix` won't know to recompile `nerves_hub_link` due to the configuration change. Force it to recompile by running:
 
 ```bash
-mix deps.compile nerves_hub --force
+mix deps.compile nerves_hub_link --force
 mix firmware
 ```
 
