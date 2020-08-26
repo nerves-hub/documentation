@@ -20,6 +20,7 @@ If you haven't done so yet, you will need to configure your AWS credentials so t
 - `web_secret_key_base` = securely generated random string (e.g. `mix phx.gen.secret`)
 - `web_smtp_username` = the Access Key ID saved from the [configure SES step](configure-ses.md)
 - `web_smtp_password` = the Secret Access Key from the [configure SES step](configure-ses.md)
+- `web_from_email` = the email address from which email will be sent on behalf of the app. [Configured in SES step](configure-ses.md)
 - `bucket_prefix` = the prefix for all S3 buckets that will be generated
 - `erl_cookie` = securely generated random string (e.g. `mix phx.gen.secret`)
 - `www_live_view_signing_salt` = securely generated random string (e.g. `mix phx.gen.secret 32`)
