@@ -33,7 +33,9 @@ Be using 	nerves_hub_link >= 0.10.0 or nerves_hub_link_http >= 0.9.0. These vers
 {:nerves_hub_link, github: "nerves-hub/nerves_hub_link", branch: "main"}
 ```
 
-You must have a nerves system that is compatible with delta updates. You can find instructions in https://github.com/nerves-project/nerves/blob/ec5ae3f2639ededd229ee159d5ec9aa8e23b5470/docs/Experimental%20Features.md for how to make the necessary changes. You can find instructions in https://hexdocs.pm/nerves/customizing-systems.html on how to generate your own nerves systems. And we also have pre-generated examples for the rpi0 and rpi3 which can be added to a mix.exs file like so:
+You must have a nerves system that is compatible with delta updates. You can find instructions here https://github.com/nerves-project/nerves/blob/ec5ae3f2639ededd229ee159d5ec9aa8e23b5470/docs/Experimental%20Features.md for how to make the necessary changes.
+
+You can find instructions in https://hexdocs.pm/nerves/customizing-systems.html on how to generate your own nerves systems. We also have pre-generated examples for the rpi0 and rpi3 which can be added to a mix.exs file like so:
 
 ```bash
 {:patchable_rpi0,        github: "verypossible/patchable_rpi0",        tag: "v1.12.1",        runtime: false,        targets: :patchable_rpi0}
