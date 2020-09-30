@@ -1,8 +1,8 @@
-# Run terraform
+# Run Terraform
 
 Now everything should be properly configure and it is time to run the terraform script to stand up the app.
 
-### Create Initial Infrastructure
+## Create Initial Infrastructure
 
 You can initialize the setup by running `setup.sh`
 
@@ -35,10 +35,11 @@ Do you want to migrate all workspaces to "s3"?
   Enter a value: yes
 ```
 
-### Run Application Stack
+## Run Application Stack
 
 And now the application stack can be run with the `staging.sh` script. Answer `yes` to any further prompts to grant permission to create resources. After this task completes, the app should be visible at the specified domain.
 
-### Debugging
+## Debugging
 
 If the build fails due to services being created out of order and missing dependencies just run the `staging.sh` script again.
+

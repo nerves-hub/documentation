@@ -77,7 +77,7 @@ The email address of the account
 Correct email and password
 {% endapi-method-response-example-description %}
 
-```
+```text
 {
     "username": "user1234",
     "email": "user@domain.com"
@@ -140,9 +140,7 @@ Show user
 {% endapi-method-summary %}
 
 {% api-method-description %}
-Return information about the user for a provided user certificate.  
-  
-**Requires:** client side SSL user certificate
+Return information about the user for a provided user certificate.**Requires:** client side SSL user certificate
 {% endapi-method-description %}
 
 {% api-method-spec %}

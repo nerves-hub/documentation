@@ -18,13 +18,13 @@
 * [Managing organizations and products](nerves-hub/managing-organizations-and-products.md)
 * [Device management](nerves-hub/device-management.md)
 * [Custom Deployment](nerves-hub/custom-deployment/README.md)
-   * [Requirements](nerves-hub/custom-deployment/requirements.md)
-   * [Configure DNS](nerves-hub/custom-deployment/configure-dns.md)
-   * [Configure SES](nerves-hub/custom-deployment/configure-ses.md)
-   * [Create tfvars](nerves-hub/custom-deployment/create-tfvars.md)
-   * [Configure Certificates](nerves-hub/custom-deployment/configure-certificates.md)
-   * [Run Terraform](nerves-hub/custom-deployment/run-terraform.md)
-   * [Run Migrations](nerves-hub/custom-deployment/run-migrations.md)
+  * [Requirements](nerves-hub/custom-deployment/requirements.md)
+  * [Configure DNS](nerves-hub/custom-deployment/configure-dns.md)
+  * [Configure SES](nerves-hub/custom-deployment/configure-ses.md)
+  * [Create tfvars](nerves-hub/custom-deployment/create-tfvars.md)
+  * [Configure Certificates](nerves-hub/custom-deployment/configure-certificates.md)
+  * [Run Terraform](nerves-hub/custom-deployment/run-terraform.md)
+  * [Run Migrations](nerves-hub/custom-deployment/run-migrations.md)
 
 ## Nerves Key
 
@@ -49,3 +49,4 @@
 * [Overview](device-api/overview.md)
 * [Phoenix Channel](device-api/phoenix-channel.md)
 * [HTTP Endpoint](device-api/http-endpoint.md)
+

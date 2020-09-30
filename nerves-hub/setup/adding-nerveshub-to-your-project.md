@@ -2,7 +2,7 @@
 
 The first step is to add [`nerves_hub_link`](https://github.com/nerves-hub/nerves_hub_link) to your target dependencies in your project's `mix.exs`. Since NervesHub uses SSL certificates, the time must be set on the device or certificate validity checks will fail. If you're not already setting the time, add [`nerves_time`](https://hex.pm/packages/nerves_time) to your dependencies. For example:
 
->
+&gt;
 
 ```elixir
   defp deps(target) do
@@ -72,11 +72,11 @@ config :nerves_hub_link, configurator: MyApp.Configurator
 
 ## Client Setup
 
-By default NervesHubLink applies updates as soon as it knows about them from the NervesHubLink server and doesn't give warning before rebooting. Optionally, you can override this behavior if desired by implementing the [`NervesHubLink.Client`](https://hexdocs.pm/nerves_hub_link/NervesHubLink.Client.html) behaviour. 
+By default NervesHubLink applies updates as soon as it knows about them from the NervesHubLink server and doesn't give warning before rebooting. Optionally, you can override this behavior if desired by implementing the [`NervesHubLink.Client`](https://hexdocs.pm/nerves_hub_link/NervesHubLink.Client.html) behaviour.
 
 This let's devices hook into the decision making process and monitor the update's progress.
 
-#### Example
+### Example
 
 ```elixir
 defmodule MyApp.NervesHubLinkClient do

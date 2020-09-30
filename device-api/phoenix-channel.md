@@ -4,7 +4,7 @@ NervesHub exposes a WebSocket interface which utilizes [Phoenix channels](https:
 
 The connection URI is `wss://device.nerves-hub.org/socket/websocket`. Once connected, you can then join any of the supported channel topics to start sending and receiving messages with NervesHub.
 
-### Message Structure
+## Message Structure
 
 NervesHub utilizes the Phoenix message structure for all WebSocket communications. In its raw form, the message is a simple list expected to be structured as `[join_ref, ref, topic, event, payload]` . \(See the [`Phoenix.Socket.Message` documetation ](https://hexdocs.pm/phoenix/Phoenix.Socket.Message.html)for more info on what each part of the message means\)
 
@@ -15,7 +15,7 @@ NervesHub utilizes the Phoenix message structure for all WebSocket communication
 [null, null, "topic3", "wat", [1, 2, 3, 4]]
 ```
 
-### Joining a Channel
+## Joining a Channel
 
 To communicate with NervesHub, you must join a channel on a supported topic once the websocket has been connected. This requires sending a message with the `phx_join` event to the desired topic:
 
@@ -23,18 +23,18 @@ To communicate with NervesHub, you must join a channel on a supported topic once
 ['arbitrary_join_ref', 'ref1', 'devices', 'phx_join', {}]
 ```
 
-### Supported Topics
+## Supported Topics
 
 NervesHub currently supports the following channel topics:
 
 * `device` - The main topic a device should join for receiving updates and other device specific events.
 * `console` - topic for the device to send IO requests to and from NervesHub for supporting remote console interaction. For Nerves, this is the topic used from remote IEx sessions.
 
-### Server Events
+## Server Events
 
 The supported events in messages coming from the server \(NervesHub\) to the client:
 
-#### **device**
+### **device**
 
 * `update`
   * Specifies that an update is available for the device
@@ -76,7 +76,6 @@ The supported events in messages coming from the server \(NervesHub\) to the cli
     }
   }
 ]
-
 ```
 
 * `reboot`
@@ -105,11 +104,11 @@ The supported events in messages coming from the server \(NervesHub\) to the cli
 [null, "some-ref-1", "devices", "phx_close", {}]
 ```
 
-### Client Events
+## Client Events
 
 The supported event messages coming from the client to server \(NervesHub\)
 
-#### device
+### device
 
 * `rebooting`
   * Tells the server that the device is rebooting
@@ -153,6 +152,4 @@ The supported event messages coming from the client to server \(NervesHub\)
   {"state": "update_rescheduled"}
 ]
 ```
-
-
 

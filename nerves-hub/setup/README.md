@@ -1,6 +1,6 @@
 # Setup
 
-### Getting Started
+## Getting Started
 
 The following sections will walk you through updating your Nerves project to work with the [nerves-hub.org](https://nerves-hub.org) NervesHub server. Using your own NervesHub server will require setting URLs to point elsewhere and is not covered below to simplify first usage.
 

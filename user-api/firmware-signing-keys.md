@@ -16,9 +16,7 @@ List
 {% endapi-method-summary %}
 
 {% api-method-description %}
-List all public firmware signing keys for the organization.  
-  
-**Requires:** client side SSL user certificate  
+List all public firmware signing keys for the organization.**Requires:** client side SSL user certificate  
 **Requires:** organization role `read`
 {% endapi-method-description %}
 
@@ -58,10 +56,8 @@ Insert
 {% endapi-method-summary %}
 
 {% api-method-description %}
-Insert a new firmware signing public key for the organization  
-  
-**Requires:** client side SSL user certificate  
-**Requires:** organization role `write`  
+Insert a new firmware signing public key for the organization**Requires:** client side SSL user certificate  
+**Requires:** organization role `write`
 {% endapi-method-description %}
 
 {% api-method-spec %}

@@ -7,3 +7,4 @@ mix nerves_hub_ca.init --path path/to/nerveshub-terraform/ssl/(staging | product
 ```
 
 Specify the staging or production directory for whichever environment you are generating certificates.
+
