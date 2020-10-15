@@ -52,6 +52,7 @@ In some cases you may opt to use your own device signer CA when creating device 
   * From the web UI at `https://www.nerves-hub.org/settings/{YOUR_ORG}/certificates/new`
   * Via CLI with `mix nerves_hub.ca_certificate register /path/to/signer-ca.pem`
 2. The signer CA must be included in the connection request alongside the NervesHub intermediate CAs. If you're using [`NervesKey`](https://github.com/nerves-hub/nerves_key), then this is typically handled for you. If managing certificates more manually, it is usually best to read at runtime and appened to the CA list. Here's a basically example of what that step might look like:
+
 ```elixir
 signer_cert =
   File.read!("/path/to/signer.pem")
