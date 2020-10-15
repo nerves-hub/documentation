@@ -2,8 +2,6 @@
 
 The first step is to add [`nerves_hub_link`](https://github.com/nerves-hub/nerves_hub_link) to your target dependencies in your project's `mix.exs`. Since NervesHub uses SSL certificates, the time must be set on the device or certificate validity checks will fail. If you're not already setting the time, add [`nerves_time`](https://hex.pm/packages/nerves_time) to your dependencies. For example:
 
-&gt;
-
 ```elixir
   defp deps(target) do
     [
@@ -42,6 +40,24 @@ config :nerves_hub_link,
     cert: "some_cert_der",
     keyfile: "path/to/keyfile"
   ]
+```
+
+**Note:** The Application config is evaluated at compile time. Extra caution is needed when using file paths in the config as they might be referencing host paths instead of device paths. Another option would be to configure at runtime (see [Runtime Configuration](#runtime-configuration))
+
+### Using your own Signer CA
+
+In some cases you may opt to use your own device signer CA when creating device certificates. If you do, there a few things needed for a successful connection:
+
+1. Your signer CA must be uploaded to NervesHub. You can do this a couple ways
+  * From the web UI at `https://www.nerves-hub.org/settings/{YOUR_ORG}/certificates/new`
+  * Via CLI with `mix nerves_hub.ca_certificate register /path/to/signer-ca.pem`
+2. The signer CA must be included in the connection request alongside the NervesHub intermediate CAs. If you're using [`NervesKey`](https://github.com/nerves-hub/nerves_key), then this is typically handled for you. If managing certificates more manually, it is usually best to read at runtime and appened to the CA list. Here's a basically example of what that step might look like:
+```elixir
+signer_cert =
+  File.read!("/path/to/signer.pem")
+  |> NervesHubLink.Certificate.pem_to_der()
+
+cacerts = [signer_cert | NervesHubLink.Certificate.ca_certs()]
 ```
 
 ## Runtime Configuration
@@ -101,4 +117,3 @@ To have NervesHubLink invoke it, add the following to your `config.exs`:
 ```elixir
 config :nerves_hub_link, client: MyApp.NervesHubLinkClient
 ```
-
