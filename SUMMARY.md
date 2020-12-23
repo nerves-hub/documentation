@@ -15,6 +15,7 @@
   * [Devices](nerves-hub/setup/devices.md)
   * [Firmware](nerves-hub/setup/firmware.md)
   * [Deployments](nerves-hub/setup/deployments.md)
+  * [Connecting to other environments](nerves-hub/setup/connecting-other-envs.md)
 * [Managing organizations and products](nerves-hub/managing-organizations-and-products.md)
 * [Device management](nerves-hub/device-management.md)
 * [Custom Deployment](nerves-hub/custom-deployment/README.md)
@@ -49,4 +50,3 @@
 * [Overview](device-api/overview.md)
 * [Phoenix Channel](device-api/phoenix-channel.md)
 * [HTTP Endpoint](device-api/http-endpoint.md)
-

@@ -1,4 +1,4 @@
-# Add NervesHub to your project
+# Add NervesHubLink to your project
 
 The first step is to add [`nerves_hub_link`](https://github.com/nerves-hub/nerves_hub_link) to your target dependencies in your project's `mix.exs`. Since NervesHub uses SSL certificates, the time must be set on the device or certificate validity checks will fail. If you're not already setting the time, add [`nerves_time`](https://hex.pm/packages/nerves_time) to your dependencies. For example:
 
