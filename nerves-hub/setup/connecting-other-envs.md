@@ -1,6 +1,6 @@
 # Connecting to other environments
 
-Some cases may require you to target other instances of NervesHub, such as testing a staging environment or directing devices to a self-hosted NervesHub. In these cases, you'll need to specify a few additional details in your application config:
+Some cases may require you to target other instances of NervesHub, such as testing a staging environment or directing devices to a self-hosted NervesHub. In these cases, you'll need to add your server's information to your project's application config:
 
 ```elixir
 host = "my-nerves-hub.org"
