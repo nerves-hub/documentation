@@ -45,7 +45,7 @@ Check with your IoT service on how the signer certificate is used. If it's only 
 
 The NervesKey saves the manufacturing serial number in the one-time programmable memory on the ATECC508A/608A and also in the device's X.509 certificate. The device's X.509 certificate is signed, so cloud servers can trust the manufacturer serial number.
 
-At this point, you're the manufacturer. Decide how you'd like your serial numbers to look. Whatever you pick, it must fit in 16-bytes. Representing the serial number is ASCII is commonly done. If you don't want to deal with this, do what we do \(Base32-encode a globally unique identify burned into the ATECC508A/608A\). `NervesKey.default_info/1` will create this default for you:
+At this point, you're the manufacturer. Decide how you'd like your serial numbers to look. Whatever you pick, it must fit in 16-bytes. Representing the serial number is commonly done in ASCII. If you don't want to deal with this, do what we do \(Base32-encode a globally unique identify burned into the ATECC508A/608A\). `NervesKey.default_info/1` will create this default for you:
 
 ```elixir
 iex> {:ok, i2c} = ATECC508A.Transport.I2C.init([])
