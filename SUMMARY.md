@@ -26,6 +26,7 @@
   * [Configure Certificates](nerves-hub/custom-deployment/configure-certificates.md)
   * [Run Terraform](nerves-hub/custom-deployment/run-terraform.md)
   * [Run Migrations](nerves-hub/custom-deployment/run-migrations.md)
+  * [FAQ](nerves-hub/custom-deployment/faq.md)
 
 ## Nerves Key
 
