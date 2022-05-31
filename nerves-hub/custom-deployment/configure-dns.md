@@ -4,7 +4,7 @@ First, you will need to manually add a hosted zone to [Route 53](https://aws.ama
 
 If you plan on running both staging and production environments, you will need to configure a second hosted zone with a staging subdomain to the production domain e.g. `staging.domain.com`. Then you will need to add an NS record to the hosted zone for the production domain with the nameservers that were generated for the staging hosted zone.
 
-**Please note:** If using a custom subdomain, you **MUST** use a name that is less than 7 characters long, otherwise it will result in an AWS resource name character limit error for parts of the Terraform.
+**NOTE:** If using a custom subdomain, you **MUST** use a name that is less than 7 characters long, otherwise it will result in an AWS resource name character limit error for parts of the Terraform.
 
 Additionally, you'll need to add a `www` CNAME record to each hosted zone pointing to it's primary domain (for certificate validation in the next step).
 
