@@ -39,7 +39,7 @@ Do you want to migrate all workspaces to "s3"?
 
 And now the application stack can be run with the `staging.sh` script. Answer `yes` to any further prompts to grant permission to create resources. After this task completes, the app should be visible at the specified domain.
 
-If you have used a custom subdomain, create a copy of staging.sh and replace all instances of the word `staging` with your custom subdomain name.
+If you have used a custom subdomain, create a copy of `staging.sh` and replace all instances of the word `staging` with your custom subdomain name.
 
 ## Debugging
 
