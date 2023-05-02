@@ -8,6 +8,6 @@ If you plan on running both staging and production environments, you will need t
 
 Additionally, you'll need to add a `www` CNAME record to each hosted zone pointing to it's primary domain (for certificate validation in the next step).
 
-Then, use [Certificate Manager](https://aws.amazon.com/certificate-manager/) to request public certificates for the `www` subdomain of each of your newly created hosted zones. e.g. `www.domain.com`, `www.staging.domain.com`. Follow the Certificat Manager instructions to validate via DNS or email and _wait_ (up to 30 minutes) for the certificates to be issued.
+Then, use [Certificate Manager](https://aws.amazon.com/certificate-manager/) to request public certificates for the `www` subdomain of each of your newly created hosted zones. e.g. `www.domain.com`, `www.staging.domain.com`. Follow the Certificate Manager instructions to validate via DNS or email and _wait_ (up to 30 minutes) for the certificates to be issued.
 
 Once the certificates have been issued, you should remove the `www` CNAME records you created previously (Terraform will make new ones shortly).
