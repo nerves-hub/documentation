@@ -2,11 +2,11 @@
 
 NervesHub exposes a WebSocket interface which utilizes [Phoenix channels](https://hexdocs.pm/phoenix/channels.html) for long lived connections. NervesHub uses SSL peer verification so the device's certificate and applicable CA certificates must be included in the connection request. The device's SSL certificate is also used to determine organization and serial number.
 
-The connection URI is `wss://device.nerves-hub.org/socket/websocket`. Once connected, you can then join any of the supported channel topics to start sending and receiving messages with NervesHub.
+The connection URI is `wss://{host}/socket/websocket`. Once connected, you can then join any of the supported channel topics to start sending and receiving messages with NervesHub.
 
 ## Message Structure
 
-NervesHub utilizes the Phoenix message structure for all WebSocket communications. In its raw form, the message is a simple list expected to be structured as `[join_ref, ref, topic, event, payload]` . \(See the [`Phoenix.Socket.Message` documetation ](https://hexdocs.pm/phoenix/Phoenix.Socket.Message.html)for more info on what each part of the message means\)
+NervesHub utilizes the Phoenix message structure for all WebSocket communications. In its raw form, the message is a simple list expected to be structured as `[join_ref, ref, topic, event, payload]` . (See the [`Phoenix.Socket.Message` documetation ](https://hexdocs.pm/phoenix/Phoenix.Socket.Message.html)for more info on what each part of the message means)
 
 ```javascript
 # Example messages
@@ -27,12 +27,12 @@ To communicate with NervesHub, you must join a channel on a supported topic once
 
 NervesHub currently supports the following channel topics:
 
-* `device` - The main topic a device should join for receiving updates and other device specific events.
+* `device` - The main topic a device should join for receiving updates and other device specific events. There is a required payload of the `device_api_version` when connecting, e.g. `{'device_api_version': '2.0.0'}`. This is used to instruct NervesHub what messages it can send to the device.
 * `console` - topic for the device to send IO requests to and from NervesHub for supporting remote console interaction. For Nerves, this is the topic used from remote IEx sessions.
 
 ## Server Events
 
-The supported events in messages coming from the server \(NervesHub\) to the client:
+The supported events in messages coming from the server (NervesHub) to the client:
 
 ### **device**
 
@@ -44,13 +44,13 @@ The supported events in messages coming from the server \(NervesHub\) to the cli
     * `firmware_url` - URL where the firmware file can be downloaded. **Note**: this has a default TTL of 10 minutes. Using the URL after that time will fail and a new update request will need to be sent for a new URL
     * `firmware_meta` - Contains a map of the various metadata elements for the firmware
       * `uuid`
-      * `architecture` 
-      * `platform` 
-      * `product` 
-      * `version` 
-      * `author` 
-      * `description` 
-      * `vcs_identifier` 
+      * `architecture`
+      * `platform`
+      * `product`
+      * `version`
+      * `author`
+      * `description`
+      * `vcs_identifier`
       * `misc`
 
 ```javascript
@@ -106,7 +106,7 @@ The supported events in messages coming from the server \(NervesHub\) to the cli
 
 ## Client Events
 
-The supported event messages coming from the client to server \(NervesHub\)
+The supported event messages coming from the client to server (NervesHub)
 
 ### device
 
@@ -152,4 +152,3 @@ The supported event messages coming from the client to server \(NervesHub\)
   {"state": "update_rescheduled"}
 ]
 ```
-

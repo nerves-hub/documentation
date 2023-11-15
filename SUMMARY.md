@@ -41,4 +41,3 @@
 
 * [Overview](device-api/overview.md)
 * [Phoenix Channel](device-api/phoenix-channel.md)
-* [HTTP Endpoint](device-api/http-endpoint.md)
