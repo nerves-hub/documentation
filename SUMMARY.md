@@ -18,15 +18,6 @@
   * [Connecting to other environments](nerves-hub/setup/connecting-other-envs.md)
 * [Managing organizations and products](nerves-hub/managing-organizations-and-products.md)
 * [Device management](nerves-hub/device-management.md)
-* [Custom Deployment](nerves-hub/custom-deployment/README.md)
-  * [Requirements](nerves-hub/custom-deployment/requirements.md)
-  * [Configure DNS](nerves-hub/custom-deployment/configure-dns.md)
-  * [Configure SES](nerves-hub/custom-deployment/configure-ses.md)
-  * [Create tfvars](nerves-hub/custom-deployment/create-tfvars.md)
-  * [Configure Certificates](nerves-hub/custom-deployment/configure-certificates.md)
-  * [Run Terraform](nerves-hub/custom-deployment/run-terraform.md)
-  * [Run Migrations](nerves-hub/custom-deployment/run-migrations.md)
-  * [FAQ](nerves-hub/custom-deployment/faq.md)
 
 ## Nerves Key
 
