@@ -8,7 +8,6 @@
 ## Nerves Hub
 
 * [Setup](nerves-hub/setup/README.md)
-  * [Creating an account](nerves-hub/setup/creating-an-account.md)
   * [Add NervesHub to your project](nerves-hub/setup/adding-nerveshub-to-your-project.md)
   * [Firmware signing keys](nerves-hub/setup/firmware-signing-keys.md)
   * [Products](nerves-hub/setup/nerveshub-products.md)
