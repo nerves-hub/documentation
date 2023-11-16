@@ -1,23 +1,20 @@
-# Connecting to other environments
+# Connecting to your environment
 
-Some cases may require you to target other instances of NervesHub, such as testing a staging environment or directing devices to a self-hosted NervesHub. In these cases, you'll need to add your server's information to your project's application config:
+To configure NervesHubLink to talk to your hosted server, the following configuration must be set:
 
 ```elixir
-host = "my-nerves-hub.org"
-port = 443
-# With a separate instance, the Server CA Certificates will be different
-# and need to be provided.
+# The Server CA Certificates need to be provided.
 ca_certs = "/path/to/my-nerves-hub.org/ca_certs"
 
 config :nerves_hub_link,
-  device_api_host: "device.#{host}",
-  device_api_sni: 'device.#{host}',
-  device_api_port: port,
+  device_api_host: "device.my-nerves-hub.org",
+  device_api_sni: 'device.my-nerves-hub.org',
+  device_api_port: 443,
   ca_certs: ca_certs
 
-config :nerves_hub_user_api, 
-  host: "api.#{host}",
-  port: port,
-  server_name_indication: "api.#{host}",
+config :nerves_hub_cli, 
+  host: "my-nerves-hub.org",
+  port: 443,
+  server_name_indication: 'my-nerves-hub.org',
   ca_certs: ca_certs
 ```

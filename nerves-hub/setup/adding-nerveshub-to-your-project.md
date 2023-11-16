@@ -6,7 +6,8 @@ The first step is to add [`nerves_hub_link`](https://github.com/nerves-hub/nerve
   defp deps(target) do
     [
       {:nerves_runtime, "~> 0.9"},
-      {:nerves_hub_link, "~> 0.1"},
+      {:nerves_hub_link, "~> 2.0"},
+      {:nerves_hub_cli, "2.0.0-dev"},
       {:nerves_time, "~> 0.2"},
       ...
     ] ++ system(target)

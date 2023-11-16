@@ -9,12 +9,12 @@
 
 * [Setup](nerves-hub/setup/README.md)
   * [Add NervesHub to your project](nerves-hub/setup/adding-nerveshub-to-your-project.md)
+  * [Connecting to your environment](nerves-hub/setup/connecting-other-envs.md)
   * [Firmware signing keys](nerves-hub/setup/firmware-signing-keys.md)
   * [Products](nerves-hub/setup/nerveshub-products.md)
   * [Devices](nerves-hub/setup/devices.md)
   * [Firmware](nerves-hub/setup/firmware.md)
   * [Deployments](nerves-hub/setup/deployments.md)
-  * [Connecting to other environments](nerves-hub/setup/connecting-other-envs.md)
 * [Managing organizations and products](nerves-hub/managing-organizations-and-products.md)
 * [Device management](nerves-hub/device-management.md)
 
