@@ -33,5 +33,5 @@
 
 ## API
 
-* [Web HTTP API](api/users.md)
+* [HTTP API](api/http-api.md)
 * [Device WebSocket](api/device-websocket.md)
