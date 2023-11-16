@@ -17,6 +17,8 @@
   * [Deployments](nerves-hub/setup/deployments.md)
 * [Managing organizations and products](nerves-hub/managing-organizations-and-products.md)
 * [Device management](nerves-hub/device-management.md)
+* [HTTP API](nerves-hub/http-api.md)
+* [Device WebSocket](nerves-hub/device-websocket.md)
 
 ## Nerves Key
 
@@ -29,8 +31,3 @@
 * [Nerves integration](nerves-key/nerves-integration.md)
 * [NervesHubLink integration](nerves-key/integration-with-nerveshublink.md)
 * [MQTT integration](nerves-key/mqtt-integration.md)
-
-## API
-
-* [HTTP API](api/http-api.md)
-* [Device WebSocket](api/device-websocket.md)
