@@ -31,13 +31,7 @@
 * [NervesHubLink integration](nerves-key/integration-with-nerveshublink.md)
 * [MQTT integration](nerves-key/mqtt-integration.md)
 
-## User API
+## API
 
-* [Users](user-api/users.md)
-* [Firmware Signing Keys](user-api/firmware-signing-keys.md)
-* [FAQ](user-api/faq.md)
-
-## Device API
-
-* [Overview](device-api/overview.md)
-* [Phoenix Channel](device-api/phoenix-channel.md)
+* [Web HTTP API](api/users.md)
+* [Device WebSocket](api/device-websocket.md)
