@@ -14,14 +14,7 @@ On success, you'll see the public key. You can confirm using the NervesHub web i
 
 The next step is to make sure that the public key is embedded into the firmware image. This is important. The device uses this key to verify the firmware it receives from a NervesHub server before applying the update. This protects the device against anyone tampering with the firmware image between when it was signed by you and when it is installed.
 
-All firmware signing public keys need to be added to your `config.exs`. Keys that are stored locally \(like the one we just created\) can be referred to by their atom name:
-
-```elixir
-config :nerves_hub_link,
-  fwup_public_keys: [:devkey]
-```
-
-If you have keys that cannot be stored locally, you will have to copy/paste their public key:
+All firmware signing public keys need to be added to your `config.exs`.
 
 ```elixir
 config :nerves_hub_link,
