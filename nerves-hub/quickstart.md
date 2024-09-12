@@ -70,4 +70,6 @@ mix firmware
 
 Then deploy to SD card via `mix burn` or to an existing working Nerves device via `mix upload`.
 
-Power it up and it should join your
+Power it up and it should join your device list.
+
+Click into it, try the Console and have some fun. For installations with more serious security and device identification needs. See the full Setup guide and how to use NervesKey.
