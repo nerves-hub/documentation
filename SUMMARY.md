@@ -7,6 +7,7 @@
 
 ## Nerves Hub
 
+* [Quickstart](nerves-hub/quickstart.md)
 * [Setup](nerves-hub/setup/README.md)
   * [Add NervesHub to your project](nerves-hub/setup/adding-nerveshub-to-your-project.md)
   * [Connecting to your environment](nerves-hub/setup/connecting-other-envs.md)
