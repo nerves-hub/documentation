@@ -34,6 +34,7 @@ In `config/target.exs`:
 ```
 config :nerves_hub_link,
   host: "devices.nervescloud.com", # or whatever your instance is
+  remote_iex: true,
   shared_secret: [
     product_key: "<YOUR KEY>",
     product_secret: "<YOUR_SECRET>"
