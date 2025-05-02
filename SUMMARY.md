@@ -5,10 +5,27 @@
 * [Public key infrastructure](public-key-infrastructure.md)
 * [Terminology](terminology.md)
 
+## Installation
+
+* [Command-line tools](nerves-hub/cli-tools.md)
+
 ## Tutorials
 
 * [Quickstart](quickstart/index.md)
 * [Production Setup with NervesKey](production/index.md)
+
+## Advanced
+
+### Nerves Hub Link
+
+* [Connection Config](advanced/nerves_hub_link/connection-config.md)
+* [Custom Update Behaviour](advanced/nerves_hub_link/custom-update-behaviour.md)
+* [Signer CA](advanced/nerves_hub_link/signer-ca.md)
+
+### Nerves Key
+
+* [Additional Storage](advanced/nerves_key/additional-storage.md)
+* [MQTT Usage](advanced/nerves_key/mqtt-usage.md)
 
 ## Nerves Hub
 
@@ -20,7 +37,6 @@
   * [Devices](nerves-hub/setup/devices.md)
   * [Firmware](nerves-hub/setup/firmware.md)
   * [Deployments](nerves-hub/setup/deployments.md)
-* [Command-line tools](nerves-hub/cli-tools.md)
 * [Managing organizations and products](nerves-hub/managing-organizations-and-products.md)
 * [Device management](nerves-hub/device-management.md)
 * [HTTP API](nerves-hub/http-api.md)
@@ -35,4 +51,3 @@
 * [Provisioning in Elixir](nerves-key/provisioning-in-elixir.md)
 * [Nerves integration](nerves-key/nerves-integration.md)
 * [NervesHubLink integration](nerves-key/integration-with-nerveshublink.md)
-* [MQTT integration](nerves-key/mqtt-integration.md)
