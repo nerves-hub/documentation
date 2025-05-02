@@ -421,6 +421,10 @@ password-protected key in a special directory. It will also upload the public
 key to NervesHub as a firmware signing key attached to your organization. Keys
 can also be added on your Organization in the web UI by visiting Signing Keys.
 
+This is **the key that allows people to put new firmware on your device** and
+it should be treated with a lot of care. Put it in the same type of secret
+management you use for the Signer CA key we created earlier
+
 ## Create a firmware update
 
 Let's modify the project. We don't have to do real work on it, we can just grab

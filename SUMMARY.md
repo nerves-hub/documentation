@@ -8,7 +8,7 @@
 ## Tutorials
 
 * [Quickstart](quickstart/index.md)
-* [Production Setup with NervesKey](quickstart/index.md)
+* [Production Setup with NervesKey](production/index.md)
 
 ## Nerves Hub
 
