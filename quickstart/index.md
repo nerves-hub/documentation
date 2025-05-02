@@ -1,8 +1,8 @@
 # Quickstart
 
-This tutorial will get your up and running with a device on your NervesHub
+This tutorial will get you up and running with a device on your NervesHub
 instance with minimal fuss. It uses the simplest approach. We offer
-[a separate guide](TODO) for production deployments with security hardware in
+[a separate guide](/production/index.md) for production deployments with security hardware in
 place.
 
 We will:
@@ -155,7 +155,7 @@ Shared Secret cryptography requires the clock to be something reasonable.
 
 Assuming your device shows up at this point we move on. If you can't get it
 working, consult [the Nerves section](https://elixirforum.com/c/nerves-forum)
-of the Elixir Forum for help.
+of the Elixir Forum and feel free to ask for help.
 
 ## Install the CLI
 
@@ -195,7 +195,7 @@ Then to avoid setting those org and product flags all the time you can set env
 vars. This means a tool like `direnv` can be helpful to manage per-project env
 vars:
 
-```
+```sh
 export NERVES_HUB_ORG="my-org"
 export NERVES_HUB_PRODUCT="my_project"
 ```
@@ -255,13 +255,13 @@ fwup -i "./_build/${MIX_TARGET}_dev/nerves/images/my_project.fw" -m --metadata-k
 Then we can use this UUID for setting up a deployment, or again, we can do this
 from the web UI.
 
-```
+```sh
 nh deployment create --name "My deployment" --firmware "UUID_GOES_HERE" --version "" --tag "main"
 ```
 
 The deployment is not active by default. To turn it on run:
 
-```
+```sh
 nh deployment update "My deployment" state on
 ```
 
@@ -280,7 +280,7 @@ web UI in the Device detail view.
 
 Future versions do not need as many commands:
 
-```
+```sh
 mix firmware
 export FW_PATH="./_build/${MIX_TARGET}_dev/nerves/images/my_project.fw"
 nh firmware sign $FW_PATH --key my-key
@@ -289,7 +289,7 @@ nh firmware publish $FW_PATH --deploy "My deployment"
 
 And of course you can build out your own script around this if you like.
 
-Congratulations! Your Nerves device can now enjoy the joys of NervesHub.
+Congratulations! Your Nerves device can now enjoy the delights of NervesHub.
 
 Check in on your device and see if it is reporting Health data, maybe a
 geo-location and try the console.

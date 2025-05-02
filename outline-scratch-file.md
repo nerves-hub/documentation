@@ -29,8 +29,7 @@ journey for setting up the particular thing it is about.
 
 - Production setup with NervesKey :: A step-by-step path through setting up a NervesKey device and the NervesHub configuration.
   - The choice
-    - Device Certificate method :: Import device certificates ahead of time. The allowlist approach. No CA used.
-    - CA method :: Signer CA + Create devices ahead of time.
+    - Device Certificate method :: Import device certificates ahead of time. The allowlist approach. Recommend adding CA if available but is not mandatory.
     - JITP method :: Signer CA + JITP CA for the product.
   - Install CLI
   - Create your project
@@ -39,7 +38,7 @@ journey for setting up the particular thing it is about.
   - Build and deploy on a device with NervesKey
   - Provision NervesKey
   - Set up your NervesHub org and product :: Include note on app name vs product name
-    - If CA or JITP: Upload Signer cert as CA
+    - Recommended for Device Cert, required for JITP: Upload Signer cert as Certificate Authority
   - If not JITP: Create device on NervesHub
     - Using CLI :: mention that it is also possible from the UI
     - If Device Certificate method: Import Device Certificate
@@ -58,6 +57,9 @@ journey for setting up the particular thing it is about.
   - Create Deployment with firmware
   - (maybe add device to Deployment, should happen automatically)
   - Check that device updates
+
+- Hosting your own NervesHub :: Installing and managing the software on your own hosting.
+
 
 
 - Other methods
@@ -79,5 +81,6 @@ Reference documentation, explanations of various concepts:
 - Signer CA and authentication
 - mTLS
 - Firmware signing keys
--
+- fwup
+- NervesHub endpoints
 
