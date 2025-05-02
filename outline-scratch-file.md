@@ -4,6 +4,9 @@ Each of these sections would be a separate tutorial essentially. It can link
 out to reference documentation and explanations but should be a straight-line
 journey for setting up the particular thing it is about.
 
+- Introduction :: What is NervesHub, why is it useful, what job does it do. Try to keep it brief but fairly dense.
+- High-level architecture :: Update the diagram
+
 - Quickstart :: A fast guide to getting up and running with NervesHub on a device with the simplest possible setup. Starting at mix nerves.new and ending at successfully shipping a firmware update.
   - Create your project
   - Set up your NervesHub product (match app name for convenience)
@@ -61,11 +64,6 @@ journey for setting up the particular thing it is about.
 - Hosting your own NervesHub :: Installing and managing the software on your own hosting.
 
 
-
-- Other methods
-  - LocalCert
-  - Other security hardware :: Overview information about TPM 2.0, ARM TrustZone and other hardware options (essentially, they are possible through OpenSSL engine mechanisms)
-
 Later tutorials
 
 - Archives
@@ -76,11 +74,53 @@ Later tutorials
   - Health
   - Geo
 
-Reference documentation, explanations of various concepts:
+Advanced topics
+
+- NervesHubLink
+  - Connection config :: socket, ssl, etc
+    - Runtime config
+  - Using a Signer CA
+  - Custom update behaviour :: Client behaviour
+  - Certificate on disk :: LocalCertKey configurator and such
+
+- NervesKey
+  - Provisioning :: re-offers the same provisioning instructions from other docs, just easy to find
+  - Additional storage
+  - MQTT usage
+
+User manual - Instructions on basic tasks and explaining configuration.
+
+- Organizations
+  - Signing Keys
+  - Certificates
+  - User accounts
+  - Access control
+- Products
+  - Support Scripts
+  - Delta firmware updates
+  - Extension: Health
+  - Extension: Geo
+- Devices
+  - Actions
+  - Health
+  - Geo-location
+  - Remote console
+- Firmware
+- Deployments
+- Archives
+
+Reference:
+
+- User API :: from OpenAPI spec, link Swagger UI, replaces http-api.md
+- Device Channel API :: current device-websocket.md but update with any missing parts of changes
+
+Concepts and explanations:
 
 - Signer CA and authentication
 - mTLS
 - Firmware signing keys
 - fwup
 - NervesHub endpoints
-
+- NervesHub vs. NervesCloud (clarifying)
+- NervesKey & Hardware Security Modules
+- Other security hardware :: Overview information about TPM 2.0, ARM TrustZone and other hardware options (essentially, they are possible through OpenSSL engine mechanisms)
