@@ -64,7 +64,7 @@ journey for setting up the particular thing it is about.
 - Hosting your own NervesHub :: Installing and managing the software on your own hosting.
 
 
-Later tutorials
+Later tutorials :: Maybe folded into User Manual part
 
 - Archives
 - Console
