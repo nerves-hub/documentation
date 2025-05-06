@@ -5,9 +5,13 @@
 * [Public key infrastructure](public-key-infrastructure.md)
 * [Terminology](terminology.md)
 
+## Tutorials
+
+* [Quickstart](quickstart/index.md)
+* [Production Setup with NervesKey](production/index.md)
+
 ## Nerves Hub
 
-* [Quickstart](nerves-hub/quickstart.md)
 * [Setup](nerves-hub/setup/README.md)
   * [Add NervesHub to your project](nerves-hub/setup/adding-nerveshub-to-your-project.md)
   * [Connecting to your environment](nerves-hub/setup/connecting-other-envs.md)
@@ -28,7 +32,6 @@
 * [NervesKey for Raspberry Pi](nerves-key/getting-started.md)
 * [Private keys and certificates](nerves-key/private-key-storage.md)
 * [General NervesKey storage](nerves-key/general-nerveskey-storage.md)
-* [Quickstart](nerves-key/quickstart.md)
 * [Provisioning in Elixir](nerves-key/provisioning-in-elixir.md)
 * [Nerves integration](nerves-key/nerves-integration.md)
 * [NervesHubLink integration](nerves-key/integration-with-nerveshublink.md)
