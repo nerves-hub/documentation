@@ -5,23 +5,15 @@ The first step is to add [`nerves_hub_link`](https://github.com/nerves-hub/nerve
 ```elixir
   defp deps(target) do
     [
-      {:nerves_runtime, "~> 0.9"},
-      {:nerves_hub_link, "~> 2.0"},
-      {:nerves_hub_cli, "2.0.0-dev"},
-      {:nerves_time, "~> 0.2"},
+      {:nerves_runtime, "~> 0.13"},
+      {:nerves_hub_link, "~> 2.7"},
+      {:nerves_time, "~> 0.4"},
       ...
     ] ++ system(target)
   end
 ```
 
-Next, update your `config.exs` so that the [`nerves_hub_link`](https://github.com/nerves-hub/nerves\_hub\_link) library can help provision devices. Do this by adding `provisioning: :nerves_hub_link` to the `:nerves, :firmware` option like this:
-
-```elixir
-config :nerves, :firmware,
-  provisioning: :nerves_hub_link
-```
-
-Adding this library will start a long-lived websocket connection with NervesHub for communicating device updates.
+Adding `:nerves_hub_link` will start a long-lived websocket connection with NervesHub for communicating device updates.
 
 ## Connection Setup
 
@@ -51,8 +43,8 @@ In some cases you may opt to use your own device signer CA when creating device 
 
 1. Your signer CA must be uploaded to NervesHub. You can do this a couple ways
 
-* From the web UI at `https://www.nerves-hub.org/settings/{YOUR_ORG}/certificates/new`
-* Via CLI with `mix nerves_hub.ca_certificate register /path/to/signer-ca.pem`
+* From the web UI at by visiting your Organization and the tab Certificates.
+* Via CLI with `nh cacert register /path/to/signer-ca.pem`
 
 2. The signer CA must be included in the connection request alongside the NervesHub intermediate CAs. If you're using [`NervesKey`](https://github.com/nerves-hub/nerves\_key), then this is typically handled for you. If managing certificates more manually, it is usually best to read at runtime and appened to the CA list. Here's a basically example of what that step might look like:
 

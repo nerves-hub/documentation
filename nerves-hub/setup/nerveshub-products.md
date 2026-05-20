@@ -18,6 +18,6 @@ For the remainder of this document, though, we will not use the `:name` field an
 Create a new product on NervesHub by running:
 
 ```bash
-mix nerves_hub.product create
+nh product create
 ```
 

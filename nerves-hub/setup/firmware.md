@@ -11,13 +11,13 @@ mix firmware
 Firmware can only be published if has been signed. You can sign the firmware by running.
 
 ```bash
-mix nerves_hub.firmware sign --key devkey
+nh firmware sign --key devkey
 ```
 
 Firmware can also be signed while publishing:
 
 ```bash
-mix nerves_hub.firmware publish --key devkey
+nh firmware publish --key devkey
 ```
 
 ## Delta Updates
