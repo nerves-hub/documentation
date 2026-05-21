@@ -42,8 +42,8 @@ You can tell `nerves_hub_link` to read those certificates and key from the chip 
 ```elixir
 def deps() do
   [
-    {:nerves_hub_link, "~> 2.7"},
-    {:nerves_key, "~> 1.2"}
+    {:nerves_hub_link, "~> 2.12"},
+    {:nerves_key, "~> 1.3"}
   ]
 end
 ```

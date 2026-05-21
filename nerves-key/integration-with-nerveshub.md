@@ -33,12 +33,12 @@ Make sure that your Nerves project includes the `:nerves_key` dependence in your
   defp deps do
     [
       # Dependencies for all targets
-      {:nerves, "~> 1.11", runtime: false},
+      {:nerves, "~> 1.14", runtime: false},
       ...
 
       # Dependencies for all targets except :host
-      {:nerves_hub_link, "~> 2.7", targets: @all_targets},
-      {:nerves_key, "~> 1.2", targets: @all_targets},
+      {:nerves_hub_link, "~> 2.12", targets: @all_targets},
+      {:nerves_key, "~> 1.3", targets: @all_targets},
       {:nerves_time, "~> 0.4", targets: @all_targets},
     ]
 ```
