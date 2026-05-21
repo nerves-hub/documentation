@@ -8,10 +8,10 @@ description: >-
 
 ## Device registration
 
-Devices must be registered with NervesHub via the commandline tools, web user interface or User API first. You will need the device's manufacturing serial number for this step. If you don't have it, the Quickstart firmware or `NervesKey.manufacturing_sn/1` can retrieve it. From the CLI, run `mix nerves_hub.device create`. Fill in the manufacturing serial number when it asks for an identifier. Fill in the `description` and `tags` fields as you'd like:
+Devices must be registered with NervesHub via the commandline tools, web user interface or User API first. You will need the device's manufacturing serial number for this step. If you don't have it, the Quickstart firmware or `NervesKey.manufacturing_sn/1` can retrieve it. From the CLI, run `nh device create`. Fill in the manufacturing serial number when it asks for an identifier. Fill in the `description` and `tags` fields as you'd like:
 
 ```text
-$ mix nerves_hub.device create
+$ nh device create
 NervesHub server: api.nerves-hub.org:443
 NervesHub organization: your_organization
 identifier: 123456789ABCDE
@@ -22,7 +22,7 @@ Device 123456789ABCDE created
 ```
 
 {% hint style="info" %}
-When registering devices in bulk, we've found that there's usually a convenient hook in the manufacturing process to call `mix nerves_hub.device create` with commandline parameters. A future enhancement to NervesHub will allows you to have NervesHub automatically create devices that present properly signed device certificates and firmware metadata.
+When registering devices in bulk, we've found that there's usually a convenient hook in the manufacturing process to call `nh device create` with commandline parameters. NervesHub also has the JITP method which allows Just-In-Time Provisioning of device information into NervesHub based on what has been provisioned into a NervesKey or certificate.
 {% endhint %}
 
 ### Integration with your Nerves project
@@ -33,13 +33,13 @@ Make sure that your Nerves project includes the `:nerves_key` dependence in your
   defp deps do
     [
       # Dependencies for all targets
-      {:nerves, "~> 1.4", runtime: false},
-      ... 
-      
+      {:nerves, "~> 1.14", runtime: false},
+      ...
+
       # Dependencies for all targets except :host
-      {:nerves_hub, "~> 0.2", targets: @all_targets},
-      {:nerves_key, "~> 0.3", targets: @all_targets},
-      {:nerves_time, "~> 0.2", targets: @all_targets},
+      {:nerves_hub_link, "~> 2.12", targets: @all_targets},
+      {:nerves_key, "~> 1.3", targets: @all_targets},
+      {:nerves_time, "~> 0.4", targets: @all_targets},
     ]
 ```
 

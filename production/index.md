@@ -144,8 +144,8 @@ you are targeting.
 In your Nerves project find `mix.exs` and in the function called `deps` add:
 
 ```elixir
-{:nerves_hub_link, "~> 2.7"},
-{:nerves_key, "~> 1.2"}
+{:nerves_hub_link, "~> 2.12"},
+{:nerves_key, "~> 1.3"}
 ```
 
 Now run:

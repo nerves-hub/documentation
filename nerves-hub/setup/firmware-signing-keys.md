@@ -7,13 +7,13 @@ Firmware authentication uses [Ed25519 digital signatures](https://en.wikipedia.o
 Start by creating a `devkey` firmware signing key pair:
 
 ```bash
-mix nerves_hub.key create devkey --org my-organisation-name
+nh key create devkey --org my-organisation-name
 ```
 
 On success, you'll see the public key. You can confirm using the NervesHub web interface that the public key exists. Private keys are never sent to the NervesHub server. NervesHub requires valid signatures from known keys on all firmware it distributes. Since this command uploads the public key to NervesHub you are now ready to sign firmware with it.
 
 ```bash
-mix nerves_hub.firmware sign myfirmware.fw --key devkey
+nh firmware sign myfirmware.fw --key devkey
 ```
 
 On authenticating with NervesHub a device will download the available public keys to enable validation of firmware signatures.

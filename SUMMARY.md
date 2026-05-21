@@ -12,6 +12,7 @@
 
 ## Nerves Hub
 
+* [Command-line tools](nerves-hub/cli-tools.md)
 * [Setup](nerves-hub/setup/README.md)
   * [Add NervesHub to your project](nerves-hub/setup/adding-nerveshub-to-your-project.md)
   * [Connecting to your environment](nerves-hub/setup/connecting-other-envs.md)
@@ -20,9 +21,6 @@
   * [Devices](nerves-hub/setup/devices.md)
   * [Firmware](nerves-hub/setup/firmware.md)
   * [Deployments](nerves-hub/setup/deployments.md)
-* [Command-line tools](nerves-hub/cli-tools.md)
-* [Managing organizations and products](nerves-hub/managing-organizations-and-products.md)
-* [Device management](nerves-hub/device-management.md)
 * [HTTP API](nerves-hub/http-api.md)
 * [Device WebSocket](nerves-hub/device-websocket.md)
 

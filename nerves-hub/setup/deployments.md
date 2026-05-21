@@ -5,7 +5,7 @@
 Deployments associate firmware images to devices. NervesHub won't send firmware to a device until you create a deployment. First find the UUID of the firmware. You can list the firmware on NervesHub by calling:
 
 ```bash
-mix nerves_hub.firmware list
+nh firmware list
 
 Firmwares:
 ------------
@@ -19,7 +19,7 @@ Firmwares:
 In this example we will create a new deployment for our test group using firmware `1cbecdbb-aa7d-5aee-4ba2-864d518417df`.
 
 ```bash
-mix nerves_hub.deployment create
+nh deployment create
 
 NervesHub organization: nerveshub
 Deployment name: qa_deployment
@@ -43,7 +43,7 @@ mix firmware
 We can publish, sign, and deploy firmware in a single command now.
 
 ```bash
-mix nerves_hub.firmware publish --key devkey --deploy qa_deployment
+nh firmware publish --key devkey --deploy qa_deployment
 ```
 
 ## Conditionally applying updates

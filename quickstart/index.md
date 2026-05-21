@@ -52,7 +52,7 @@ Shared Secret authentication. Hit the button for creating a new Shared Secret.
 In your Nerves project find `mix.exs` and in the function called `deps` add:
 
 ```elixir
-{:nerves_hub_link, "~> 2.7"},
+{:nerves_hub_link, "~> 2.12"},
 ```
 
 Now run:
